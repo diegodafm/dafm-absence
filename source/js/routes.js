@@ -5,19 +5,19 @@
         .config(['$routeProvider','$stateProvider',function($routeProvider,$stateProvider) {
 
             $routeProvider.otherwise({
-                redirectTo: ""
+                redirectTo: ''
             });
 
             $stateProvider
                 .state('main', {
-                    url: "",
-                    templateUrl: "source/partials/TestTemplate2.html",
-                    controller: 'TestController'
-                })
-                .state('home', {
-                    url: '/home',
+                    url: '',
                     templateUrl: 'source/partials/TestTemplate2.html',
                     controller: 'TestController'
+                })
+                .state('calendar', {
+                    url: '/calendar',
+                    templateUrl: 'source/partials/calendar.html',
+                    controller: 'CalendarController'
                 })
                 .state('map', {
                     url: '/map',

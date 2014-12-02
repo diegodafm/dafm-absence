@@ -1,7 +1,7 @@
 {
     "curly": true,
     "devel": true,
-    "camelcase": true,
+    "camelcase": false,
     "smarttabs": true,
     "latedef": "nofunc",
     "eqeqeq": true,

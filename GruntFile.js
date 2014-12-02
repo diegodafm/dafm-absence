@@ -78,11 +78,19 @@ module.exports = function( grunt ) {
 		    app: {
 		      	files: {
 		      		'index.html' : [
+                        'bower_components/jquery/dist/jquery,min.js',
 		        		'bower_components/angular/angular.js',
+                        'bower_components/moment/min/moment-with-locales.min.js',
+                        'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
                         'bower_components/angular-ui-router/release/angular-ui-router.js',
+                        'bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar.js',
                         'bower_components/angular-route/angular-route.min.js',
-		        		'source/js/**/*js', 		          		
-		          		'source/dist/styles/css/main.css'
+		        		'source/js/**/*js',
+
+                        /*--CSS--*/
+		          		'source/dist/styles/css/main.css',
+                        'bower_components/bootstrap/dist/css/bootstrap.min.css',
+                        'bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css'
 		        	]
 		        }
 		    },
