@@ -79,6 +79,8 @@ module.exports = function( grunt ) {
 		      	files: {
 		      		'index.html' : [
 		        		'bower_components/angular/angular.js',
+                        'bower_components/angular-ui-router/release/angular-ui-router.js',
+                        'bower_components/angular-route/angular-route.min.js',
 		        		'source/js/**/*js', 		          		
 		          		'source/dist/styles/css/main.css'
 		        	]

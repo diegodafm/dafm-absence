@@ -2,5 +2,9 @@
 	'use strict';
 
 
-	angular.module('app', ['app.exception']);
+	angular.module('app', [
+        'ui.router',
+        'app.routes',
+        'app.exception'
+   ]);
 })();

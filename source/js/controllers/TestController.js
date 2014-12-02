@@ -7,7 +7,7 @@
 	*/
 
 	angular.module('app')
-		.controller('testController', function(){
+		.controller('TestController', function(){
 		
 	});
 })();
