@@ -6,6 +6,7 @@
  */
 var Absence = require('../models/absence');
 var express = require('express');
+var moment = require('moment');
 var router = express.Router();
 
 
@@ -72,6 +73,26 @@ router.route('/absences/:id').delete(function(req, res) {
         }
 
         res.json({ message: 'Successfully deleted' });
+    });
+});
+
+router.route('/absences/filter/availability/:date/:period').get(function(req, res) {
+
+    var dateFrom = moment(req.params.date);
+    var dateTo = moment(dateFrom).add(1, 'days');
+
+    var filter = {
+        date: {"$gte": dateFrom.format(), "$lt": dateTo.format()},
+        unit: req.params.period.toUpperCase(),
+        type: {$ne: ''}
+    };
+
+    Absence.find(filter, function(err, absences) {
+        if (err) {
+            return res.send(err);
+        }
+
+        res.json(absences);
     });
 });
 

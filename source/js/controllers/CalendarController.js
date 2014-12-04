@@ -62,15 +62,15 @@
             }
 
             $scope.eventClicked = function(event) {
-                showModal('Clicked', event);
+                showModal('show', event);
             };
 
             $scope.eventEdited = function(event) {
-                showModal('Edited', event);
+                showModal('update', event);
             };
 
             $scope.eventDeleted = function(event) {
-                showModal('Deleted', event);
+                showModal('delete', event);
             };
 
             $scope.setCalendarToToday = function() {
@@ -85,7 +85,7 @@
             };
 
             $scope.addAbsent = function() {
-                showModal('Add', {});
+                showModal('add', {});
             };
 
         });

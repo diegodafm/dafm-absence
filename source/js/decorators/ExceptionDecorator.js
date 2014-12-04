@@ -9,13 +9,13 @@
     angular.module('app.exception', [])
         .config(function($provide) {
 
-        	$provide.decorator('$exceptionHandler', ['$log', '$delegate',
-    			function($log, $delegate) {
-    				return function(exception, cause) {
-    			  		$log.debug('Default exception handler.');
-    			  		$delegate(exception, cause);
-    				};
-          		}
-        	]);
+            $provide.decorator('$exceptionHandler', ['$log', '$delegate',
+                function($log, $delegate) {
+                    return function(exception, cause) {
+                        $log.debug('Default exception handler.');
+                        $delegate(exception, cause);
+                    };
+                }
+            ]);
         });
 })();

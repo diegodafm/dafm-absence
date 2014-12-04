@@ -24,9 +24,6 @@ var absenceSchema = new Schema({
 
 });
 
-console.log('absenceSchema');
-console.log(absenceSchema);
-
 module.exports = mongoose.model('Absence', absenceSchema);
 
 

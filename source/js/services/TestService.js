@@ -1,14 +1,14 @@
-(function(){
-	'use strict';
+(function() {
+    'use strict';
 
-	/**
-	 * @name testService
-	 * @description This is a test service
-	 */
+    /**
+     * @name testService
+     * @description This is a test service
+     */
 
 
-	angular.module('app')
-		.service('testService', function(){
-			
-		});
+    angular.module('app')
+        .service('testService', function() {
+
+        });
 })();

@@ -29,7 +29,8 @@
     "canonical-path": "0.0.2",
     "dgeni": "^0.4.1",
     "dgeni-packages": "^0.10.7",
-    "grunt-jsbeautifier": "~0.2.7"
+    "grunt-jsbeautifier": "~0.2.7",
+    "moment": "~2.8.4"
   },
   "scripts": {
     "postinstall": "bower install"

@@ -10,21 +10,13 @@
      */
 
     angular.module('app')
-        .controller('AbsenceController', function($scope, action, event, AbsenceFactory, moment) {
-
-            $scope.absence = {};
-
-            console.log(moment);
-
-            AbsenceFactory.getAbsences().then(function(result) {
-                console.log(result.data);
-            });
-
-            $scope.users = ['Diego', 'Alisson', 'Mendonca', 'Diego Alisson F Mendonca'];
+        .controller('AbsenceController', function($scope, action, event, AbsenceFactory) {
 
             $scope.action = action;
 
-            $scope.event = event;
+            initAbsence(event);
+
+            $scope.users = ['Diego', 'Alisson', 'Mendonca', 'Diego Alisson F Mendonca'];
 
             $scope.today = function() {
                 $scope.dt = new Date();
@@ -62,13 +54,35 @@
 
             $scope.submit = function() {
 
+                debugger;
+
                 var absence = transformAbsence($scope.absence);
 
-                console.log(absence);
+                switch ($scope.action){
+                    case 'add':
+                        AbsenceFactory.checkAvailability(absence).then(function(availability){
+                            if(availability.data.length > 0){
+                                alert('clash detected');
+                            } else {
+                                AbsenceFactory.insertAbsence(absence).then(function(result) {
+                                    console.log(result);
+                                });
+                            }
+                        });
+                        break;
 
-                AbsenceFactory.insertAbsence(absence).then(function(result) {
-                    console.log(result);
-                });
+                    case 'update':
+                        AbsenceFactory.updateAbsence(absence).then(function(result) {
+                            console.log(result);
+                        });
+                        break;
+
+                    case 'delete':
+                        AbsenceFactory.deleteAbsence(absence).then(function(result) {
+                            console.log(result);
+                        });
+                        break;
+                }
 
             };
 
@@ -76,17 +90,27 @@
                 var absence = angular.copy(_absence);
 
                 if (absence.unit.toUpperCase() === 'AM') {
-                    absence.starts_at = new Date($scope.absence.date.setHours(9, 0, 0));
-                    absence.ends_at = new Date($scope.absence.date.setHours(13, 0, 0));
+                    absence.starts_at = new Date(new Date(absence.date).setHours(9, 0, 0));
+                    absence.ends_at = new Date(new Date(absence.date).setHours(13, 0, 0));
                 } else if (absence.unit.toUpperCase() === 'PM') {
-                    absence.starts_at = new Date($scope.absence.date.setHours(13, 0, 0));
-                    absence.ends_at = new Date($scope.absence.date.setHours(18, 0, 0));
+                    absence.starts_at = new Date(new Date(absence.date).setHours(13, 0, 0));
+                    absence.ends_at = new Date(new Date(absence.date).setHours(18, 0, 0));
                 }
 
                 absence.editable = true;
                 absence.deletable = true;
 
                 return absence;
+            }
+
+            function initAbsence(_absence) {
+                if ($scope.action === "add") {
+                    $scope.absence = {};
+                } else {
+                    $scope.absence = angular.copy(_absence);
+                }
+
+
             }
 
         });
