@@ -10,8 +10,7 @@
      */
 
     angular.module('app')
-        .controller('MainController', function(){
+        .controller('MainController', function() {
 
         });
 })();
-

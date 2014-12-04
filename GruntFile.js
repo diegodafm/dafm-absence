@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 					cssDir: 'source/dist/styles/css'					
 				}
 			}
-		},		
+		},
 		uglify: {
 		    app: {
 		    	files: {
@@ -36,6 +36,11 @@ module.exports = function( grunt ) {
 		      	}
 		    }
   		},
+        jsbeautifier : {
+            files : ["source/**/*.js"],
+            options : {
+            }
+        },
   		jshint: {
 			all: {
 				options: {
@@ -131,6 +136,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-clean'); //
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //keep JavaScript code consistent
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
+    grunt.loadNpmTasks('grunt-jsbeautifier'); //beautifier javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
 	grunt.loadNpmTasks('grunt-html2js'); //converts AngularJS templates to JavaScript
 	grunt.loadNpmTasks('grunt-injector'); //injects css and js in a file
@@ -153,6 +159,6 @@ module.exports = function( grunt ) {
 	
 	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'injector', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 
-	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'injector' ,'jshint', 'ngAnnotate', 'dgeni', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
+	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'injector', 'jsbeautifier','jshint', 'ngAnnotate', 'dgeni', 'uglify', 'clean:temp']);
 };
 

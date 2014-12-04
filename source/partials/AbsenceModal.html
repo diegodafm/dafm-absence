@@ -1,0 +1,26 @@
+<form role="form">
+    <div class="form-group">
+        <label for="userName">Name</label>
+        <input id="userName" type="text" ng-model="absence.name" typeahead="user for user in users | filter:$viewValue | limitTo:8" class="form-control ng-valid ng-dirty ng-valid-editable" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-01M-9712">
+    </div>
+    <div class="form-group">
+        <label for="eventName">Event</label>
+        <input id="eventName" type="text" ng-model="absence.type" typeahead="user for user in users | filter:$viewValue | limitTo:8" class="form-control ng-valid ng-dirty ng-valid-editable" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-01M-9712">
+    </div>
+    <div class="form-group">
+        <label for="eventName">Date</label>
+        <p class="input-group">
+            <input type="text" class="form-control" ng-model="absence.date"  datepicker-popup="{{format}}" starting-day=0 ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </p>
+    </div>
+    <div class="form-group">
+        <label for="eventName">Unit</label>
+        <span ng-model="absence.unit" btn-radio="'AM'">AM</span>
+        <span ng-model="absence.unit" btn-radio="'PM'">PM</span>
+    </div>
+
+    <button type="submit" class="btn btn-default" ng-click="submit()">Submit</button>
+</form>

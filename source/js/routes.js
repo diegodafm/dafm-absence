@@ -1,8 +1,8 @@
-(function(){
+(function() {
     'use strict';
 
-    angular.module('app.routes', ['ngRoute','ui.router'])
-        .config(['$routeProvider','$stateProvider',function($routeProvider,$stateProvider) {
+    angular.module('app.routes', ['ngRoute', 'ui.router'])
+        .config(['$routeProvider', '$stateProvider', function($routeProvider, $stateProvider) {
 
             $routeProvider.otherwise({
                 redirectTo: ''

@@ -1,4 +1,13 @@
 
+<h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
+
+<label ng-model="calendarView" btn-radio="'year'">year</label>
+<label ng-model="calendarView" btn-radio="'month'">month</label>
+<label ng-model="calendarView" btn-radio="'week'">week</label>
+<label ng-model="calendarView" btn-radio="'day'">day</label>
+
+<label ng-click="addAbsent()" >Add Absent</label>
+
 
 
 
@@ -14,3 +23,7 @@
         calendar-delete-event-click="eventDeleted($event)"
         calendar-auto-open="true"
         ></mwl-calendar>
+
+        <label ng-click="calendarControl.prev()"> Prev</label>
+        <label ng-click="setCalendarToToday()"> Today</label>
+        <label ng-click="calendarControl.next()"> Next</label>

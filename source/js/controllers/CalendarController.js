@@ -11,18 +11,36 @@
      */
 
     angular.module('app')
-        .controller('CalendarController', function($scope, $modal){
+        .controller('CalendarController', function($scope, $modal, AbsenceFactory) {
 
-            $scope.events = [
-                {
+            $scope.events = [];
+
+            AbsenceFactory.getAbsences().then(function(result) {
+                $scope.events = result.data;
+            });
+
+            /*
+
+            90 a 13
+            13 a 17
+            $scope.events = [{
                     title: 'My event title', // The title of the event
                     type: 'info', // The type of the event (determines its color). Can be important, warning, info, inverse, success or special
-                    starts_at: new Date(2014,11,2,6), // A javascript date object for when the event starts
-                    ends_at: new Date(2014,11,2,15), // A javascript date object for when the event ends
+                    starts_at: new Date(2014, 11, 2, 6), // A javascript date object for when the event starts
+                    ends_at: new Date(2014, 11, 2, 15), // A javascript date object for when the event ends
                     editable: false, // If calendar-edit-event-html is set and this field is explicitly set to false then dont make it editable
                     deletable: false // If calendar-delete-event-html is set and this field is explicitly set to false then dont make it deleteable
+                }, {
+                    title: 'My event sstitle', // The title of the event
+                    type: 'info', // The type of the event (determines its color). Can be important, warning, info, inverse, success or special
+                    starts_at: new Date(2014, 11, 2, 6), // A javascript date object for when the event starts
+                    ends_at: new Date(2014, 11, 2, 15), // A javascript date object for when the event ends
+                    editable: true, // If calendar-edit-event-html is set and this field is explicitly set to false then dont make it editable
+                    deletable: true // If calendar-delete-event-html is set and this field is explicitly set to false then dont make it deleteable
                 }
+
             ];
+            */
 
             $scope.calendarView = 'month';
 
@@ -30,11 +48,15 @@
 
             function showModal(action, event) {
                 $modal.open({
-                    templateUrl: 'modalContent.html',
-                    controller: function($scope, $modalInstance) {
-                        $scope.$modalInstance = $modalInstance;
-                        $scope.action = action;
-                        $scope.event = event;
+                    templateUrl: '/source/partials/absenceModal.html',
+                    controller: 'AbsenceController',
+                    resolve: {
+                        action: function() {
+                            return action;
+                        },
+                        event: function() {
+                            return event;
+                        }
                     }
                 });
             }
@@ -60,6 +82,10 @@
                 $event.stopPropagation();
 
                 event[field] = !event[field];
+            };
+
+            $scope.addAbsent = function() {
+                showModal('Add', {});
             };
 
         });

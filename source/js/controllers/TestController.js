@@ -1,14 +1,13 @@
 (function() {
-	'use strict';
+    'use strict';
 
-	/**
-	* @name testController
-	* @description This is a test controller
-	*/
+    /**
+     * @name testController
+     * @description This is a test controller
+     */
 
-	angular.module('app')
-		.controller('TestController', function(){
-		
-	});
+    angular.module('app')
+        .controller('TestController', function() {
+
+        });
 })();
-  
