@@ -83,7 +83,7 @@ router.route('/absences/filter/availability/:date/:period').get(function(req, re
 
     var filter = {
         date: {"$gte": dateFrom.format(), "$lt": dateTo.format()},
-        unit: req.params.period.toUpperCase(),
+        period: req.params.period.toUpperCase(),
         type: {$ne: ''}
     };
 

@@ -47,9 +47,10 @@
             $scope.calendarDay = new Date();
 
             function showModal(action, event) {
-                $modal.open({
+                var modalInstance = $modal.open({
                     templateUrl: '/source/partials/absenceModal.html',
                     controller: 'AbsenceController',
+                    size: 'sm',
                     resolve: {
                         action: function() {
                             return action;
@@ -58,6 +59,14 @@
                             return event;
                         }
                     }
+                });
+
+                modalInstance.result.then(function() {
+                    AbsenceFactory.getAbsences().then(function(result) {
+                        $scope.events = result.data;
+                    });
+                }, function() {
+
                 });
             }
 

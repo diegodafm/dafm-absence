@@ -1,17 +1,33 @@
 
-<h2 class="text-center">{{ calendarControl.getTitle() }}</h2>
 
-<label ng-model="calendarView" btn-radio="'year'">year</label>
-<label ng-model="calendarView" btn-radio="'month'">month</label>
-<label ng-model="calendarView" btn-radio="'week'">week</label>
-<label ng-model="calendarView" btn-radio="'day'">day</label>
+<section class="calendarWidget">
 
-<label ng-click="addAbsent()" >Add Absent</label>
+    <header>
 
+        <h2 class="" data-ng-bind="calendarControl.date.month"></h2>
 
+        <h1 class="" data-ng-bind="calendarControl.date.year"></h1>
 
+        <nav>
+            <ul>
+                <li ng-click="calendarControl.prev()">Prev</li>
+                <li ng-click="setCalendarToToday()">Today</li>
+                <li ng-click="calendarControl.next()">Next</li>
+            </ul>
+        </nav>
 
-<mwl-calendar
+    </header>
+
+    <nav class="subnav clearfix">
+        <label class="btn pull-left" ng-click="addAbsent()" >Add Absence</label>
+
+        <div class="pull-right">
+            <label class="btn" ng-model="calendarView" btn-radio="'month'">month</label>
+            <label class="btn" ng-model="calendarView" btn-radio="'day'">day</label>
+        </div>
+    </nav>
+
+    <mwl-calendar
         calendar-events="events"
         calendar-view="calendarView"
         calendar-current-day="calendarDay"
@@ -21,9 +37,8 @@
         calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
         calendar-edit-event-click="eventEdited($event)"
         calendar-delete-event-click="eventDeleted($event)"
-        calendar-auto-open="true"
-        ></mwl-calendar>
+        calendar-auto-open="true"></mwl-calendar>
 
-        <label ng-click="calendarControl.prev()"> Prev</label>
-        <label ng-click="setCalendarToToday()"> Today</label>
-        <label ng-click="calendarControl.next()"> Next</label>
+
+
+</section>

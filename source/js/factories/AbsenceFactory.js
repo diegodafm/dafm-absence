@@ -33,7 +33,25 @@ angular.module('app')
         };
 
         absenceFactory.checkAvailability = function(absence) {
-            return $http.get(urlBase + '/filter/availability/'+ moment(absence.date).format('YYYY,MM,DD') + '/' + absence.unit );
+
+            /*
+            $http.get(urlBase + '/filter/availability/'+ moment(absence.date).format('YYYY,MM,DD') + '/' + absence.unit).then(function(result){
+                if(result.data.length > 0 ){
+                    return {
+                        availability: false,
+                        message : 'We already have a absence for this period',
+                        absence : result.data[0]
+                    };
+                } else {
+                    return {
+                        availability: true,
+                        message : 'Absence available for this period'
+                    };
+                }
+            });
+            */
+
+            return $http.get(urlBase + '/filter/availability/' + moment(absence.date).format('YYYY,MM,DD') + '/' + absence.period);
         };
 
         return absenceFactory;

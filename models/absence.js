@@ -14,7 +14,7 @@ var absenceSchema = new Schema({
 
     'ends_at': Date,
 
-    'unit': String,
+    'period': String,
 
     'type': String,
 

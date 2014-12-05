@@ -93,9 +93,10 @@ module.exports = function( grunt ) {
 		        		'source/js/**/*js',
 
                         /*--CSS--*/
-		          		'source/dist/styles/css/main.css',
+
                         'bower_components/bootstrap/dist/css/bootstrap.min.css',
-                        'bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css'
+                        'bower_components/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css',
+                        'source/dist/styles/css/main.css',
 		        	]
 		        }
 		    },

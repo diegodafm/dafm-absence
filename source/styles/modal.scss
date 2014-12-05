@@ -1,0 +1,57 @@
+section.popup{
+
+
+  header{
+    border-bottom: 2px solid #756486;
+    height: 43px;
+    background-color: #917ca6;
+
+      .title{
+        color: #fff;
+        margin-left: 14px;
+        font-size: 24px;
+        line-height: 43px;
+      }
+  }
+
+  main{
+    padding: 12px;
+
+    label{
+      display: inline-block;
+      color:#a434e1;
+      font-size: 14px;
+    }
+
+    .radio{
+      display: inline-block;
+      border: 1px solid #c1c1c1;
+      background-color: #fff;
+      color:#a434e1;
+      border-radius: 2px;
+      font-size: 12px;
+      line-height: 22px;
+      padding: 0 12px;
+      margin-left: 4px;
+      cursor: pointer;
+
+
+      &:hover, &.selected{
+
+        border: 1px solid #c1c1c1;
+        background-color: #a434e1;
+        color:#fff;
+
+      }
+    }
+
+    .submit{
+      width: 100%;
+      border: 1px solid #c1c1c1;
+      background-color: #a434e1;
+      color:#fff;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,6 +1,12 @@
 angular.module('app.modules', []).run(['$templateCache', function($templateCache) {
-  $templateCache.put("../source/partials/TestTemplate.html",
-    "{{ 1 + 1 }}");
-  $templateCache.put("../source/partials/TestTemplate2.html",
-    "{{ 5+5 }}");
+    $templateCache.put("../source/partials/TestTemplate.html",
+        "{{ 1 + 1 }}");
+    $templateCache.put("../source/partials/TestTemplate2.html",
+        "{{ 5+5 }}");
+    $templateCache.put("../source/partials/absenceModal.html",
+        "<form role=form><div class=form-group><label for=userName>Name</label><input id=userName ng-model=absence.name typeahead=\"user for user in users | filter:$viewValue | limitTo:8\" class=\"form-control ng-valid ng-dirty ng-valid-editable\" aria-autocomplete=list aria-expanded=false aria-owns=typeahead-01M-9712></div><div class=form-group><label>Absence Type</label><p class=input-group><span ng-model=absence.type btn-radio=\"'P'\">P</span> <span ng-model=absence.type btn-radio=\"'V'\">V</span> <span ng-model=absence.type btn-radio=\"'T'\">T</span></p></div><div class=form-group><label>Date</label><p class=input-group><input class=form-control ng-model=absence.date datepicker-popup={{format}} starting-day=0 ng-model=dt is-open=opened min-date=minDate max-date=\"'2015-06-22'\" datepicker-options=dateOptions date-disabled=\"disabled(date, mode)\" ng-required=true close-text=\"Close\"> <span class=input-group-btn><button type=button class=\"btn btn-default\" ng-click=open($event)><i class=\"glyphicon glyphicon-calendar\"></i></button></span></p></div><div class=form-group><label>Unit</label><span ng-model=absence.period btn-radio=\"'AM'\">AM</span> <span ng-model=absence.period btn-radio=\"'PM'\">PM</span></div><button type=submit class=\"btn btn-default\" ng-click=submit()>Submit</button></form>");
+    $templateCache.put("../source/partials/calendar.html",
+        "<section class=calendarWidget><header><h2>December</h2><h1>2014</h1><nav><ul><li>anterior</li><li>hoje</li><li>proximo</li></ul></nav></header><h2 class=text-center>{{ calendarControl.getTitle() }}</h2><label ng-model=calendarView btn-radio=\"'year'\">year</label><label ng-model=calendarView btn-radio=\"'month'\">month</label><label ng-model=calendarView btn-radio=\"'week'\">week</label><label ng-model=calendarView btn-radio=\"'day'\">day</label><label ng-click=addAbsent()>Add Absent</label><mwl-calendar calendar-events=events calendar-view=calendarView calendar-current-day=calendarDay calendar-control=calendarControl calendar-event-click=eventClicked($event) calendar-edit-event-html=\"'<i class=\\'glyphicon glyphicon-pencil\\'></i>'\" calendar-delete-event-html=\"'<i class=\\'glyphicon glyphicon-remove\\'></i>'\" calendar-edit-event-click=eventEdited($event) calendar-delete-event-click=eventDeleted($event) calendar-auto-open=true></mwl-calendar><label ng-click=calendarControl.prev()>Prev</label><label ng-click=setCalendarToToday()>Today</label><label ng-click=calendarControl.next()>Next</label></section>");
+    $templateCache.put("../source/partials/login.html",
+        "<!DOCTYPE html><html><head><title></title></head><body></body></html>");
 }]);
