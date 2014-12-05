@@ -5,7 +5,7 @@
   "description": " s",
   "repository": "https://github.com/diegofss11/myAngularSeed",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "~4.2.0",
     "body-parser": "~1.0.0",
     "mongoose": "~3.8.11",
@@ -31,5 +31,8 @@
     "dgeni-packages": "^0.10.7",
     "grunt-jsbeautifier": "~0.2.7",
     "moment": "~2.8.4"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
