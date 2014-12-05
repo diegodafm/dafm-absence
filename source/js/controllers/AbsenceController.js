@@ -72,7 +72,7 @@
 
                     case 'update':
                         AbsenceFactory.checkAvailability(absence).then(function(availability) {
-                            if (availability.data.length > 0) {
+                            if (availability.data.length > 0 && availability.data[0]._id !== absence._id) {
                                 alert('clash detected');
                             } else {
                                 AbsenceFactory.updateAbsence(absence).then(function(result) {

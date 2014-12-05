@@ -11,8 +11,8 @@
             $stateProvider
                 .state('main', {
                     url: '',
-                    templateUrl: 'source/partials/TestTemplate2.html',
-                    controller: 'TestController'
+                    templateUrl: 'source/partials/calendar.html',
+                    controller: 'CalendarController'
                 })
                 .state('calendar', {
                     url: '/calendar',

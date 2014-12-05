@@ -7,10 +7,6 @@
             <div class="form-group">
                 <label for="userName">Name *</label>
                 <input id="userName" type="text" ng-model="absence.name" class="form-control ng-valid ng-dirty ng-valid-editable" required>
-
-                    <div ng-show="!absence.name">Please agree and sign.</div>
-
-
             </div>
             <div class="form-group">
                 <label>Absence Type *</label>
@@ -35,14 +31,7 @@
                     <span class="radio" ng-model="absence.period" ng-class="{'selected': absence.period =='AM'}" btn-radio="'AM'" ng-required="!absence.period">AM</span>
                     <span class="radio" ng-model="absence.period" ng-class="{'selected': absence.period =='PM'}" btn-radio="'PM'" ng-required="!absence.period">PM</span>
                 </p>
-
-
-                    <div ng-show="!absence.period">Please agree and sign.</div>
-
-
-
             </div>
-
             <button type="submit" class="btn btn-default submit">Submit</button>
         </main>
     </form>
