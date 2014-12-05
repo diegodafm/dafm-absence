@@ -182,18 +182,19 @@ section.popup header .title {
   margin-left: 14px;
   font-size: 24px;
   line-height: 43px;
+  text-transform: capitalize;
 }
-/* line 17, ../../../styles/modal.scss */
+/* line 18, ../../../styles/modal.scss */
 section.popup main {
   padding: 12px;
 }
-/* line 20, ../../../styles/modal.scss */
+/* line 21, ../../../styles/modal.scss */
 section.popup main label {
   display: inline-block;
   color: #a434e1;
   font-size: 14px;
 }
-/* line 26, ../../../styles/modal.scss */
+/* line 27, ../../../styles/modal.scss */
 section.popup main .radio {
   display: inline-block;
   border: 1px solid #c1c1c1;
@@ -206,13 +207,13 @@ section.popup main .radio {
   margin-left: 4px;
   cursor: pointer;
 }
-/* line 39, ../../../styles/modal.scss */
+/* line 40, ../../../styles/modal.scss */
 section.popup main .radio:hover, section.popup main .radio.selected {
   border: 1px solid #c1c1c1;
   background-color: #a434e1;
   color: #fff;
 }
-/* line 48, ../../../styles/modal.scss */
+/* line 49, ../../../styles/modal.scss */
 section.popup main .submit {
   width: 100%;
   border: 1px solid #c1c1c1;

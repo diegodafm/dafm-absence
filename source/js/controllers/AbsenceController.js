@@ -14,9 +14,7 @@
 
             $scope.action = action;
 
-            initAbsence(event);
-
-            $scope.users = ['Diego', 'Alisson', 'Mendonca', 'Diego Alisson F Mendonca'];
+            init(event);
 
             $scope.today = function() {
                 $scope.dt = new Date();
@@ -58,36 +56,15 @@
 
                 switch ($scope.action) {
                     case 'add':
-                        AbsenceFactory.checkAvailability(absence).then(function(availability) {
-                            if (availability.data.length > 0) {
-                                alert('clash detected');
-                            } else {
-                                AbsenceFactory.insertAbsence(absence).then(function(result) {
-                                    console.log(result);
-                                    $modalInstance.close();
-                                });
-                            }
-                        });
+                        addAbsence();
                         break;
 
                     case 'update':
-                        AbsenceFactory.checkAvailability(absence).then(function(availability) {
-                            if (availability.data.length > 0 && availability.data[0]._id !== absence._id) {
-                                alert('clash detected');
-                            } else {
-                                AbsenceFactory.updateAbsence(absence).then(function(result) {
-                                    console.log(result);
-                                    $modalInstance.close();
-                                });
-                            }
-                        });
+                        updateAbsence();
                         break;
 
                     case 'delete':
-                        AbsenceFactory.deleteAbsence(absence).then(function(result) {
-                            console.log(result);
-                            $modalInstance.close();
-                        });
+                        deleteAbsence();
                         break;
                 }
 
@@ -110,14 +87,53 @@
                 return absence;
             }
 
-            function initAbsence(_absence) {
+            function init(_absence) {
                 if ($scope.action === 'add') {
                     $scope.absence = {};
+
                 } else {
+
                     $scope.absence = angular.copy(_absence);
                 }
 
+                if($scope.action === 'show' || $scope.action === 'delete'){
+                    $scope.edittable = false;
+                } else {
+                    $scope.edittable = true;
+                }
+            }
 
+            function addAbsence(){
+                AbsenceFactory.checkAvailability(absence).then(function(availability) {
+                    if (availability.data.length > 0) {
+                        alert('clash detected');
+                    } else {
+                        AbsenceFactory.insertAbsence(absence).then(function(result) {
+                            console.log(result);
+                            $modalInstance.close();
+                        });
+                    }
+                });
+            }
+
+            function updateAbsence(){
+                AbsenceFactory.checkAvailability(absence).then(function(availability) {
+                    if (availability.data.length > 0 && availability.data[0]._id !== absence._id) {
+                        alert('clash detected');
+                    } else {
+                        AbsenceFactory.updateAbsence(absence).then(function(result) {
+                            console.log(result);
+                            $modalInstance.close();
+                        });
+                    }
+                });
+            }
+
+            function deleteAbsence(){
+                AbsenceFactory.deleteAbsence(absence).then(function(result) {
+                    console.log(result);
+                    $modalInstance.close();
+                });
             }
 
         });
