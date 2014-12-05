@@ -48,7 +48,7 @@
 
             function showModal(action, event) {
                 var modalInstance = $modal.open({
-                    templateUrl: '/source/partials/absenceModal.html',
+                    templateUrl: 'source/partials/absenceModal.html',
                     controller: 'AbsenceController',
                     size: 'sm',
                     resolve: {
