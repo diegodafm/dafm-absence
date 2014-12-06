@@ -56,15 +56,15 @@
 
                 switch ($scope.action) {
                     case 'add':
-                        addAbsence();
+                        addAbsence(absence);
                         break;
 
                     case 'update':
-                        updateAbsence();
+                        updateAbsence(absence);
                         break;
 
                     case 'delete':
-                        deleteAbsence();
+                        deleteAbsence(absence);
                         break;
                 }
 
@@ -96,14 +96,14 @@
                     $scope.absence = angular.copy(_absence);
                 }
 
-                if($scope.action === 'show' || $scope.action === 'delete'){
+                if ($scope.action === 'show' || $scope.action === 'delete') {
                     $scope.edittable = false;
                 } else {
                     $scope.edittable = true;
                 }
             }
 
-            function addAbsence(){
+            function addAbsence(absence) {
                 AbsenceFactory.checkAvailability(absence).then(function(availability) {
                     if (availability.data.length > 0) {
                         alert('clash detected');
@@ -116,7 +116,7 @@
                 });
             }
 
-            function updateAbsence(){
+            function updateAbsence(absence) {
                 AbsenceFactory.checkAvailability(absence).then(function(availability) {
                     if (availability.data.length > 0 && availability.data[0]._id !== absence._id) {
                         alert('clash detected');
@@ -129,7 +129,7 @@
                 });
             }
 
-            function deleteAbsence(){
+            function deleteAbsence(absence) {
                 AbsenceFactory.deleteAbsence(absence).then(function(result) {
                     console.log(result);
                     $modalInstance.close();
