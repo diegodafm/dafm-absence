@@ -121,6 +121,12 @@ section.calendarWidget{
   .cal-slide-content{
     background-color: #b329fe;
 
+    ul{
+      li{
+        margin: 4px 0;
+      }
+    }
+
     .glyphicon{
       color: #fff;
     }

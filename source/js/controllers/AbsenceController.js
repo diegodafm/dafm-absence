@@ -10,9 +10,11 @@
      */
 
     angular.module('app')
-        .controller('AbsenceController', function($scope, $modalInstance, action, event, AbsenceFactory) {
+        .controller('AbsenceController', function($scope, $modalInstance, action, event, AbsenceFactory, moment) {
 
             $scope.action = action;
+
+            $scope.showPanelMessage = false;
 
             init(event);
 
@@ -50,7 +52,13 @@
 
             $scope.format = 'yyyy/MM/dd';
 
+            $scope.cancel = function(){
+                $modalInstance.close();
+            };
+
             $scope.submit = function() {
+
+                var result = true;
 
                 var absence = transformAbsence($scope.absence);
 
@@ -64,9 +72,11 @@
                         break;
 
                     case 'delete':
-                        deleteAbsence(absence);
+                        $scope.deleteConfirmation = true;
                         break;
                 }
+
+                return result;
 
             };
 
@@ -90,27 +100,18 @@
             function init(_absence) {
                 if ($scope.action === 'add') {
                     $scope.absence = {};
-
                 } else {
-
                     $scope.absence = angular.copy(_absence);
-                }
-
-                if ($scope.action === 'show' || $scope.action === 'delete') {
-                    $scope.edittable = false;
-                } else {
-                    $scope.edittable = true;
                 }
             }
 
             function addAbsence(absence) {
                 AbsenceFactory.checkAvailability(absence).then(function(availability) {
                     if (availability.data.length > 0) {
-                        alert('clash detected');
+                        $scope.openPanelMessage('Clash detected! You cannot add an absence at this period ['+absence.period+']');
                     } else {
                         AbsenceFactory.insertAbsence(absence).then(function(result) {
-                            console.log(result);
-                            $modalInstance.close();
+                            $scope.fadeoutMessage('Absence added');
                         });
                     }
                 });
@@ -119,23 +120,57 @@
             function updateAbsence(absence) {
                 AbsenceFactory.checkAvailability(absence).then(function(availability) {
                     if (availability.data.length > 0 && availability.data[0]._id !== absence._id) {
-                        alert('clash detected');
+                        $scope.openPanelMessage('Clash detected! You cannot add an absence at this period ['+absence.period+']');
                     } else {
                         AbsenceFactory.updateAbsence(absence).then(function(result) {
                             console.log(result);
-                            $modalInstance.close();
+                            $scope.fadeoutMessage('Absence updated');
                         });
                     }
                 });
             }
 
-            function deleteAbsence(absence) {
-                AbsenceFactory.deleteAbsence(absence).then(function(result) {
-                    console.log(result);
-                    $modalInstance.close();
+            $scope.deleteAbsence = function () {
+                AbsenceFactory.deleteAbsence($scope.absence).then(function(result) {
+                    $scope.fadeoutMessage('Absence deleted');
                 });
             }
 
+            $scope.closeModal = function(){
+                $modalInstance.close(function(){
+                    $scope.showPanelMessage = false;
+                });
+            };
+
+            $scope.cancelDelete = function(){
+                $scope.deleteConfirmation = false;
+            };
+
+            $scope.openPanelMessage= function(message){
+                $scope.panelMessage = message;
+                $scope.showPanelMessage = true;
+                $scope.allowBack = true;
+            };
+
+            $scope.closePanelMessage= function(){
+                $scope.showPanelMessage = false;
+                $scope.allowBack = false;
+            };
+
+            $scope.fadeoutMessage = function(message){
+                $scope.showPanelMessage = true;
+                $scope.panelMessage = message;
+
+                setTimeout(function(){
+                    $modalInstance.close(function(){
+                        $scope.showPanelMessage = false;
+                    });
+                },5000);
+            }
+
+            $scope.formatDate =function(date,pattern){
+                return moment(date).format(pattern);
+            }
         });
 })();
 

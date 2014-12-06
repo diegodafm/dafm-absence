@@ -21,39 +21,38 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: inherit;
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, ../../../styles/reset.scss */
+/* line 27, ../../../styles/reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, ../../../styles/reset.scss */
+/* line 30, ../../../styles/reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, ../../../styles/reset.scss */
+/* line 33, ../../../styles/reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, ../../../styles/reset.scss */
+/* line 36, ../../../styles/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 41, ../../../styles/reset.scss */
+/* line 40, ../../../styles/reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, ../../../styles/reset.scss */
+/* line 44, ../../../styles/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;

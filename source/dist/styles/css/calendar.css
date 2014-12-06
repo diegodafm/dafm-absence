@@ -117,15 +117,19 @@ section.calendarWidget .cal-row-fluid {
 section.calendarWidget .cal-slide-content {
   background-color: #b329fe;
 }
-/* line 124, ../../../styles/calendar.scss */
+/* line 125, ../../../styles/calendar.scss */
+section.calendarWidget .cal-slide-content ul li {
+  margin: 4px 0;
+}
+/* line 130, ../../../styles/calendar.scss */
 section.calendarWidget .cal-slide-content .glyphicon {
   color: #fff;
 }
-/* line 129, ../../../styles/calendar.scss */
+/* line 135, ../../../styles/calendar.scss */
 section.calendarWidget .cal-day-tick {
   bottom: -19px;
 }
-/* line 135, ../../../styles/calendar.scss */
+/* line 141, ../../../styles/calendar.scss */
 section.calendarWidget .btn {
   display: inline-block;
   border: 2px solid #fff;
@@ -133,7 +137,7 @@ section.calendarWidget .btn {
   font-size: 14px;
   padding: 0 25px;
 }
-/* line 143, ../../../styles/calendar.scss */
+/* line 149, ../../../styles/calendar.scss */
 section.calendarWidget .btn:hover {
   background: #fff;
   border: 2px solid #dbdbdb;

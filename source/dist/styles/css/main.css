@@ -148,15 +148,19 @@ section.calendarWidget .cal-row-fluid {
 section.calendarWidget .cal-slide-content {
   background-color: #b329fe;
 }
-/* line 124, ../../../styles/calendar.scss */
+/* line 125, ../../../styles/calendar.scss */
+section.calendarWidget .cal-slide-content ul li {
+  margin: 4px 0;
+}
+/* line 130, ../../../styles/calendar.scss */
 section.calendarWidget .cal-slide-content .glyphicon {
   color: #fff;
 }
-/* line 129, ../../../styles/calendar.scss */
+/* line 135, ../../../styles/calendar.scss */
 section.calendarWidget .cal-day-tick {
   bottom: -19px;
 }
-/* line 135, ../../../styles/calendar.scss */
+/* line 141, ../../../styles/calendar.scss */
 section.calendarWidget .btn {
   display: inline-block;
   border: 2px solid #fff;
@@ -164,7 +168,7 @@ section.calendarWidget .btn {
   font-size: 14px;
   padding: 0 25px;
 }
-/* line 143, ../../../styles/calendar.scss */
+/* line 149, ../../../styles/calendar.scss */
 section.calendarWidget .btn:hover {
   background: #fff;
   border: 2px solid #dbdbdb;
@@ -184,17 +188,33 @@ section.popup header .title {
   line-height: 43px;
   text-transform: capitalize;
 }
-/* line 18, ../../../styles/modal.scss */
+/* line 17, ../../../styles/modal.scss */
+section.popup header .btn-close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  background-color: #fff;
+  width: 23px;
+  height: 23px;
+  border-radius: 10px 0 10px 10px;
+  line-height: 19px;
+  font-size: 18px;
+  color: #756486;
+  font-family: verdana;
+  padding-left: 7px;
+  cursor: pointer;
+}
+/* line 34, ../../../styles/modal.scss */
 section.popup main {
   padding: 12px;
 }
-/* line 21, ../../../styles/modal.scss */
+/* line 37, ../../../styles/modal.scss */
 section.popup main label {
   display: inline-block;
   color: #a434e1;
   font-size: 14px;
 }
-/* line 27, ../../../styles/modal.scss */
+/* line 43, ../../../styles/modal.scss */
 section.popup main .radio {
   display: inline-block;
   border: 1px solid #c1c1c1;
@@ -207,13 +227,13 @@ section.popup main .radio {
   margin-left: 4px;
   cursor: pointer;
 }
-/* line 40, ../../../styles/modal.scss */
+/* line 56, ../../../styles/modal.scss */
 section.popup main .radio:hover, section.popup main .radio.selected {
   border: 1px solid #c1c1c1;
   background-color: #a434e1;
   color: #fff;
 }
-/* line 49, ../../../styles/modal.scss */
+/* line 65, ../../../styles/modal.scss */
 section.popup main .submit {
   width: 100%;
   border: 1px solid #c1c1c1;
@@ -221,6 +241,27 @@ section.popup main .submit {
   color: #fff;
   font-size: 12px;
   line-height: 22px;
+}
+/* line 75, ../../../styles/modal.scss */
+section.popup .confirmationPanel {
+  position: absolute;
+  top: 0px;
+  background-color: #a434e1;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  padding: 20px;
+}
+/* line 89, ../../../styles/modal.scss */
+section.popup .confirmationPanel p {
+  text-align: center;
+  margin-top: 140px;
+}
+/* line 94, ../../../styles/modal.scss */
+section.popup .confirmationPanel .btns {
+  margin-top: 40px;
+  text-align: center;
 }
 
 @font-face {
@@ -251,39 +292,38 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: inherit;
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, ../../../styles/reset.scss */
+/* line 27, ../../../styles/reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, ../../../styles/reset.scss */
+/* line 30, ../../../styles/reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, ../../../styles/reset.scss */
+/* line 33, ../../../styles/reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, ../../../styles/reset.scss */
+/* line 36, ../../../styles/reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 41, ../../../styles/reset.scss */
+/* line 40, ../../../styles/reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, ../../../styles/reset.scss */
+/* line 44, ../../../styles/reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;

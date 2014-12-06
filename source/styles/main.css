@@ -100,6 +100,8 @@ section.calendarWidget {
     border-color: #fff; }
   section.calendarWidget .cal-slide-content {
     background-color: #b329fe; }
+    section.calendarWidget .cal-slide-content ul li {
+      margin: 4px 0; }
     section.calendarWidget .cal-slide-content .glyphicon {
       color: #fff; }
   section.calendarWidget .cal-day-tick {
@@ -124,6 +126,20 @@ section.popup header {
     font-size: 24px;
     line-height: 43px;
     text-transform: capitalize; }
+  section.popup header .btn-close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background-color: #fff;
+    width: 23px;
+    height: 23px;
+    border-radius: 10px 0 10px 10px;
+    line-height: 19px;
+    font-size: 18px;
+    color: #756486;
+    font-family: verdana;
+    padding-left: 7px;
+    cursor: pointer; }
 section.popup main {
   padding: 12px; }
   section.popup main label {
@@ -152,6 +168,21 @@ section.popup main {
     color: #fff;
     font-size: 12px;
     line-height: 22px; }
+section.popup .confirmationPanel {
+  position: absolute;
+  top: 0px;
+  background-color: #a434e1;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+  padding: 20px; }
+  section.popup .confirmationPanel p {
+    text-align: center;
+    margin-top: 140px; }
+  section.popup .confirmationPanel .btns {
+    margin-top: 40px;
+    text-align: center; }
 
 @font-face {
   font-family: 'CaviarDreams';
@@ -178,8 +209,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+  font: inherit; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
