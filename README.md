@@ -1,5 +1,6 @@
+
 ===========
-MyAngularSeed - Seed for AngularJS application starter
+dafm-absence - Application using following resources
 ===========
 
 ##Grunt plugins avaialable:
@@ -17,5 +18,8 @@ MyAngularSeed - Seed for AngularJS application starter
 * grunt-inject - Injects references to files into other files - js and css
 * time-grunt - Shows the execution time for grunt tasks
 * Dgeni - Documentation generator on js files
+
+
+=======
 
 
