@@ -2,9 +2,16 @@
 	Global SCSS file - other files must be imported here 
 */
 
+
+@import "_colors";
+@import "_reset";
+@import "_fonts";
+@import "_calendar";
+@import "_modal";
+
 html{
   font-family: 'CaviarDreams';
-  
+
 
   body{
     font-family: 'CaviarDreams';
@@ -14,10 +21,3 @@ html{
     background: linear-gradient(#b428ff, #c9c9c9); /* Standard syntax */
   }
 }
-
-@import "page1";
-@import "page2";
-@import "calendar";
-@import "modal";
-@import "fonts";
-@import "reset";

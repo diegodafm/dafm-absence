@@ -13,7 +13,7 @@ section.calendarWidget{
 
   header{
     text-align: center;
-    color: #fff;
+    color: $white;
 
 
     h2{
@@ -42,11 +42,11 @@ section.calendarWidget{
 
           &:hover{
 
-            border-bottom: 2px solid #fff;
+            border-bottom: 2px solid $white;
 
             &:before{
               content:"";
-              background: #fff;
+              background: $white;
               position: absolute;
               bottom: 0;
               left: 0;
@@ -56,7 +56,7 @@ section.calendarWidget{
 
             &:after{
               content:"";
-              background: #fff;
+              background: $white;
               position: absolute;
               bottom: 0;
               right: 0;
@@ -72,7 +72,7 @@ section.calendarWidget{
 
   nav.subnav{
     margin: 36px 0 20px 0;
-    color: #fff;
+    color: $white;
   }
 
   .cal-month-box,.cal-week-box, .cal-day-box{
@@ -85,7 +85,7 @@ section.calendarWidget{
     }
 
     .cal-cell1{
-      color: #fff;
+      color: $white;
       &:hover{
         background: none;
       }
@@ -106,16 +106,16 @@ section.calendarWidget{
       text-align: center;
       line-height: 20px;
       background: #b329fe;
-      color: #fff;
+      color: $white;
     }
   }
 
   .cal-cell{
-    border-color: #fff;
+    border-color: $white;
   }
 
   .cal-row-fluid{
-    border-color: #fff;
+    border-color: $white;
   }
 
   .cal-slide-content{
@@ -123,12 +123,12 @@ section.calendarWidget{
 
     ul{
       li{
-        margin: 4px 0;
+
       }
     }
 
     .glyphicon{
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -140,7 +140,7 @@ section.calendarWidget{
 
   .btn{
     display: inline-block;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     line-height: 31px;
     font-size: 14px;
     padding: 0 25px;
@@ -148,7 +148,7 @@ section.calendarWidget{
 
     &:hover{
 
-      background: #fff;
+      background: $white;
       border: 2px solid #dbdbdb;
 
     }

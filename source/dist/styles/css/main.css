@@ -1,279 +1,11 @@
 /* 
 	Global SCSS file - other files must be imported here 
 */
-/* line 5, ../../../styles/main.scss */
-html {
-  font-family: 'CaviarDreams';
-}
-/* line 9, ../../../styles/main.scss */
-html body {
-  font-family: 'CaviarDreams';
-  background: -webkit-linear-gradient(#b428ff, #c9c9c9);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#b428ff, #c9c9c9);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#b428ff, #c9c9c9);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#b428ff, #c9c9c9);
-  /* Standard syntax */
-}
-
-/* app css stylesheet */
-/* line 3, ../../../styles/page1.scss */
-body li {
-  color: white;
-}
-
-/* line 1, ../../../styles/page2.scss */
-ul {
-  color: white;
-}
-
-/* line 1, ../../../styles/calendar.scss */
-section.calendarWidget {
-  max-width: 647px;
-  margin: auto;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* line 14, ../../../styles/calendar.scss */
-section.calendarWidget header {
-  text-align: center;
-  color: #fff;
-}
-/* line 19, ../../../styles/calendar.scss */
-section.calendarWidget header h2 {
-  font-size: 30px;
-  margin: 26px 0 0 0;
-}
-/* line 24, ../../../styles/calendar.scss */
-section.calendarWidget header h1 {
-  font-size: 60px;
-  margin: 17px 0 10px 0;
-}
-/* line 29, ../../../styles/calendar.scss */
-section.calendarWidget header nav {
-  justify-content: center;
-  display: flex;
-}
-/* line 32, ../../../styles/calendar.scss */
-section.calendarWidget header nav ul {
-  list-style: none;
-}
-/* line 35, ../../../styles/calendar.scss */
-section.calendarWidget header nav ul li {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding: 0 10px 2px 10px;
-  margin: 0 25px;
-  border-bottom: 2px solid transparent;
-}
-/* line 43, ../../../styles/calendar.scss */
-section.calendarWidget header nav ul li:hover {
-  border-bottom: 2px solid #fff;
-}
-/* line 47, ../../../styles/calendar.scss */
-section.calendarWidget header nav ul li:hover:before {
-  content: "";
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 50%;
-  width: 2px;
-}
-/* line 57, ../../../styles/calendar.scss */
-section.calendarWidget header nav ul li:hover:after {
-  content: "";
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50%;
-  width: 2px;
-}
-/* line 73, ../../../styles/calendar.scss */
-section.calendarWidget nav.subnav {
-  margin: 36px 0 20px 0;
-  color: #fff;
-}
-/* line 78, ../../../styles/calendar.scss */
-section.calendarWidget .cal-month-box, section.calendarWidget .cal-week-box, section.calendarWidget .cal-day-box {
-  background: rgba(255, 255, 255, 0.7);
-}
-/* line 83, ../../../styles/calendar.scss */
-section.calendarWidget .cal-row-head:hover {
-  background: none;
-}
-/* line 87, ../../../styles/calendar.scss */
-section.calendarWidget .cal-row-head .cal-cell1 {
-  color: #fff;
-}
-/* line 89, ../../../styles/calendar.scss */
-section.calendarWidget .cal-row-head .cal-cell1:hover {
-  background: none;
-}
-/* line 95, ../../../styles/calendar.scss */
-section.calendarWidget .events-list {
-  width: 100%;
-  padding: 2px 5px;
-}
-/* line 99, ../../../styles/calendar.scss */
-section.calendarWidget .events-list a {
-  width: 100%;
-  height: 20px;
-  border-radius: 2px;
-  box-shadow: none;
-  border: none;
-  font-size: 10px;
-  text-align: center;
-  line-height: 20px;
-  background: #b329fe;
-  color: #fff;
-}
-/* line 113, ../../../styles/calendar.scss */
-section.calendarWidget .cal-cell {
-  border-color: #fff;
-}
-/* line 117, ../../../styles/calendar.scss */
-section.calendarWidget .cal-row-fluid {
-  border-color: #fff;
-}
-/* line 121, ../../../styles/calendar.scss */
-section.calendarWidget .cal-slide-content {
-  background-color: #b329fe;
-}
-/* line 125, ../../../styles/calendar.scss */
-section.calendarWidget .cal-slide-content ul li {
-  margin: 4px 0;
-}
-/* line 130, ../../../styles/calendar.scss */
-section.calendarWidget .cal-slide-content .glyphicon {
-  color: #fff;
-}
-/* line 135, ../../../styles/calendar.scss */
-section.calendarWidget .cal-day-tick {
-  bottom: -19px;
-}
-/* line 141, ../../../styles/calendar.scss */
-section.calendarWidget .btn {
-  display: inline-block;
-  border: 2px solid #fff;
-  line-height: 31px;
-  font-size: 14px;
-  padding: 0 25px;
-}
-/* line 149, ../../../styles/calendar.scss */
-section.calendarWidget .btn:hover {
-  background: #fff;
-  border: 2px solid #dbdbdb;
-}
-
-/* line 4, ../../../styles/modal.scss */
-section.popup header {
-  border-bottom: 2px solid #756486;
-  height: 43px;
-  background-color: #917ca6;
-}
-/* line 9, ../../../styles/modal.scss */
-section.popup header .title {
-  color: #fff;
-  margin-left: 14px;
-  font-size: 24px;
-  line-height: 43px;
-  text-transform: capitalize;
-}
-/* line 17, ../../../styles/modal.scss */
-section.popup header .btn-close {
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  background-color: #fff;
-  width: 23px;
-  height: 23px;
-  border-radius: 10px 0 10px 10px;
-  line-height: 19px;
-  font-size: 18px;
-  color: #756486;
-  font-family: verdana;
-  padding-left: 7px;
-  cursor: pointer;
-}
-/* line 34, ../../../styles/modal.scss */
-section.popup main {
-  padding: 12px;
-}
-/* line 37, ../../../styles/modal.scss */
-section.popup main label {
-  display: inline-block;
-  color: #a434e1;
-  font-size: 14px;
-}
-/* line 43, ../../../styles/modal.scss */
-section.popup main .radio {
-  display: inline-block;
-  border: 1px solid #c1c1c1;
-  background-color: #fff;
-  color: #a434e1;
-  border-radius: 2px;
-  font-size: 12px;
-  line-height: 22px;
-  padding: 0 12px;
-  margin-left: 4px;
-  cursor: pointer;
-}
-/* line 56, ../../../styles/modal.scss */
-section.popup main .radio:hover, section.popup main .radio.selected {
-  border: 1px solid #c1c1c1;
-  background-color: #a434e1;
-  color: #fff;
-}
-/* line 65, ../../../styles/modal.scss */
-section.popup main .submit {
-  width: 100%;
-  border: 1px solid #c1c1c1;
-  background-color: #a434e1;
-  color: #fff;
-  font-size: 12px;
-  line-height: 22px;
-}
-/* line 75, ../../../styles/modal.scss */
-section.popup .confirmationPanel {
-  position: absolute;
-  top: 0px;
-  background-color: #a434e1;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  color: #fff;
-  padding: 20px;
-}
-/* line 89, ../../../styles/modal.scss */
-section.popup .confirmationPanel p {
-  text-align: center;
-  margin-top: 140px;
-}
-/* line 94, ../../../styles/modal.scss */
-section.popup .confirmationPanel .btns {
-  margin-top: 40px;
-  text-align: center;
-}
-
-@font-face {
-  font-family: 'CaviarDreams';
-  src: url("/source/fonts/CaviarDreams.ttf") format("truetype");
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 18, ../../../styles/reset.scss */
+/* line 18, ../../../styles/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -295,36 +27,298 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, ../../../styles/reset.scss */
+/* line 27, ../../../styles/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 30, ../../../styles/reset.scss */
+/* line 30, ../../../styles/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 33, ../../../styles/reset.scss */
+/* line 33, ../../../styles/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 36, ../../../styles/reset.scss */
+/* line 36, ../../../styles/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, ../../../styles/reset.scss */
+/* line 40, ../../../styles/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 44, ../../../styles/reset.scss */
+/* line 44, ../../../styles/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url("/source/fonts/CaviarDreams.ttf") format("truetype");
+}
+
+/* line 1, ../../../styles/_calendar.scss */
+section.calendarWidget {
+  max-width: 647px;
+  margin: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 14, ../../../styles/_calendar.scss */
+section.calendarWidget header {
+  text-align: center;
+  color: white;
+}
+/* line 19, ../../../styles/_calendar.scss */
+section.calendarWidget header h2 {
+  font-size: 30px;
+  margin: 26px 0 0 0;
+}
+/* line 24, ../../../styles/_calendar.scss */
+section.calendarWidget header h1 {
+  font-size: 60px;
+  margin: 17px 0 10px 0;
+}
+/* line 29, ../../../styles/_calendar.scss */
+section.calendarWidget header nav {
+  justify-content: center;
+  display: flex;
+}
+/* line 32, ../../../styles/_calendar.scss */
+section.calendarWidget header nav ul {
+  list-style: none;
+}
+/* line 35, ../../../styles/_calendar.scss */
+section.calendarWidget header nav ul li {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 0 10px 2px 10px;
+  margin: 0 25px;
+  border-bottom: 2px solid transparent;
+}
+/* line 43, ../../../styles/_calendar.scss */
+section.calendarWidget header nav ul li:hover {
+  border-bottom: 2px solid white;
+}
+/* line 47, ../../../styles/_calendar.scss */
+section.calendarWidget header nav ul li:hover:before {
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 2px;
+}
+/* line 57, ../../../styles/_calendar.scss */
+section.calendarWidget header nav ul li:hover:after {
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 2px;
+}
+/* line 73, ../../../styles/_calendar.scss */
+section.calendarWidget nav.subnav {
+  margin: 36px 0 20px 0;
+  color: white;
+}
+/* line 78, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-month-box, section.calendarWidget .cal-week-box, section.calendarWidget .cal-day-box {
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 83, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-row-head:hover {
+  background: none;
+}
+/* line 87, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-row-head .cal-cell1 {
+  color: white;
+}
+/* line 89, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-row-head .cal-cell1:hover {
+  background: none;
+}
+/* line 95, ../../../styles/_calendar.scss */
+section.calendarWidget .events-list {
+  width: 100%;
+  padding: 2px 5px;
+}
+/* line 99, ../../../styles/_calendar.scss */
+section.calendarWidget .events-list a {
+  width: 100%;
+  height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
+  background: #b329fe;
+  color: white;
+}
+/* line 113, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-cell {
+  border-color: white;
+}
+/* line 117, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-row-fluid {
+  border-color: white;
+}
+/* line 121, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-slide-content {
+  background-color: #b329fe;
+}
+/* line 130, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-slide-content .glyphicon {
+  color: white;
+}
+/* line 135, ../../../styles/_calendar.scss */
+section.calendarWidget .cal-day-tick {
+  bottom: -19px;
+}
+/* line 141, ../../../styles/_calendar.scss */
+section.calendarWidget .btn {
+  display: inline-block;
+  border: 2px solid white;
+  line-height: 31px;
+  font-size: 14px;
+  padding: 0 25px;
+}
+/* line 149, ../../../styles/_calendar.scss */
+section.calendarWidget .btn:hover {
+  background: white;
+  border: 2px solid #dbdbdb;
+}
+
+/* line 4, ../../../styles/_modal.scss */
+section.popup header {
+  border-bottom: 2px solid #756486;
+  height: 43px;
+  background-color: #917ca6;
+}
+/* line 9, ../../../styles/_modal.scss */
+section.popup header .title {
+  color: white;
+  margin-left: 14px;
+  font-size: 24px;
+  line-height: 43px;
+  text-transform: capitalize;
+}
+/* line 17, ../../../styles/_modal.scss */
+section.popup header .btn-close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  background-color: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 10px 0 10px 10px;
+  line-height: 19px;
+  font-size: 18px;
+  color: #756486;
+  font-family: verdana;
+  padding-left: 7px;
+  cursor: pointer;
+}
+/* line 34, ../../../styles/_modal.scss */
+section.popup main {
+  padding: 12px;
+}
+/* line 37, ../../../styles/_modal.scss */
+section.popup main label {
+  display: inline-block;
+  color: #a434e1;
+  font-size: 14px;
+}
+/* line 43, ../../../styles/_modal.scss */
+section.popup main .radio {
+  display: inline-block;
+  border: 1px solid #c1c1c1;
+  background-color: white;
+  color: #a434e1;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0 12px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+/* line 56, ../../../styles/_modal.scss */
+section.popup main .radio:hover, section.popup main .radio.selected {
+  border: 1px solid #c1c1c1;
+  background-color: #a434e1;
+  color: white;
+}
+/* line 65, ../../../styles/_modal.scss */
+section.popup main .submit {
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  background-color: #a434e1;
+  color: white;
+  font-size: 12px;
+  line-height: 22px;
+}
+/* line 74, ../../../styles/_modal.scss */
+section.popup main em.error {
+  color: #a434e1;
+  font-size: 11px;
+}
+/* line 79, ../../../styles/_modal.scss */
+section.popup main input.error {
+  border: 1px solid #a434e1;
+}
+/* line 85, ../../../styles/_modal.scss */
+section.popup .confirmationPanel {
+  position: absolute;
+  top: 0px;
+  background-color: #a434e1;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+/* line 95, ../../../styles/_modal.scss */
+section.popup .confirmationPanel p {
+  text-align: center;
+  margin-top: 140px;
+}
+/* line 100, ../../../styles/_modal.scss */
+section.popup .confirmationPanel .btns {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* line 12, ../../../styles/main.scss */
+html {
+  font-family: 'CaviarDreams';
+}
+/* line 16, ../../../styles/main.scss */
+html body {
+  font-family: 'CaviarDreams';
+  background: -webkit-linear-gradient(#b428ff, #c9c9c9);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#b428ff, #c9c9c9);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#b428ff, #c9c9c9);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#b428ff, #c9c9c9);
+  /* Standard syntax */
 }

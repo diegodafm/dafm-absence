@@ -19,29 +19,6 @@
                 $scope.events = result.data;
             });
 
-            /*
-
-            90 a 13
-            13 a 17
-            $scope.events = [{
-                    title: 'My event title', // The title of the event
-                    type: 'info', // The type of the event (determines its color). Can be important, warning, info, inverse, success or special
-                    starts_at: new Date(2014, 11, 2, 6), // A javascript date object for when the event starts
-                    ends_at: new Date(2014, 11, 2, 15), // A javascript date object for when the event ends
-                    editable: false, // If calendar-edit-event-html is set and this field is explicitly set to false then dont make it editable
-                    deletable: false // If calendar-delete-event-html is set and this field is explicitly set to false then dont make it deleteable
-                }, {
-                    title: 'My event sstitle', // The title of the event
-                    type: 'info', // The type of the event (determines its color). Can be important, warning, info, inverse, success or special
-                    starts_at: new Date(2014, 11, 2, 6), // A javascript date object for when the event starts
-                    ends_at: new Date(2014, 11, 2, 15), // A javascript date object for when the event ends
-                    editable: true, // If calendar-edit-event-html is set and this field is explicitly set to false then dont make it editable
-                    deletable: true // If calendar-delete-event-html is set and this field is explicitly set to false then dont make it deleteable
-                }
-
-            ];
-            */
-
             $scope.calendarView = 'month';
 
             $scope.calendarDay = new Date();
@@ -62,9 +39,11 @@
                 });
 
                 modalInstance.result.then(function() {
-                    AbsenceFactory.getAbsences().then(function(result) {
-                        $scope.events = result.data;
-                    });
+                    if (event !== 'show') {
+                        AbsenceFactory.getAbsences().then(function(result) {
+                            $scope.events = result.data;
+                        });
+                    }
                 }, function() {
 
                 });
@@ -82,6 +61,10 @@
                 showModal('delete', event);
             };
 
+            $scope.addAbsent = function() {
+                showModal('add', {});
+            };
+
             $scope.setCalendarToToday = function() {
                 $scope.calendarDay = new Date();
             };
@@ -91,10 +74,6 @@
                 $event.stopPropagation();
 
                 event[field] = !event[field];
-            };
-
-            $scope.addAbsent = function() {
-                showModal('add', {});
             };
 
         });

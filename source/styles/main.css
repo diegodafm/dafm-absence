@@ -1,193 +1,6 @@
 /* 
 	Global SCSS file - other files must be imported here 
 */
-html {
-  font-family: 'CaviarDreams'; }
-  html body {
-    font-family: 'CaviarDreams';
-    background: -webkit-linear-gradient(#b428ff, #c9c9c9);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#b428ff, #c9c9c9);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#b428ff, #c9c9c9);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#b428ff, #c9c9c9);
-    /* Standard syntax */ }
-
-/* app css stylesheet */
-body li {
-  color: white; }
-
-ul {
-  color: white; }
-
-section.calendarWidget {
-  max-width: 647px;
-  margin: auto;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  section.calendarWidget header {
-    text-align: center;
-    color: #fff; }
-    section.calendarWidget header h2 {
-      font-size: 30px;
-      margin: 26px 0 0 0; }
-    section.calendarWidget header h1 {
-      font-size: 60px;
-      margin: 17px 0 10px 0; }
-    section.calendarWidget header nav {
-      justify-content: center;
-      display: flex; }
-      section.calendarWidget header nav ul {
-        list-style: none; }
-        section.calendarWidget header nav ul li {
-          display: inline-block;
-          cursor: pointer;
-          position: relative;
-          padding: 0 10px 2px 10px;
-          margin: 0 25px;
-          border-bottom: 2px solid transparent; }
-          section.calendarWidget header nav ul li:hover {
-            border-bottom: 2px solid #fff; }
-            section.calendarWidget header nav ul li:hover:before {
-              content: "";
-              background: #fff;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              height: 50%;
-              width: 2px; }
-            section.calendarWidget header nav ul li:hover:after {
-              content: "";
-              background: #fff;
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              height: 50%;
-              width: 2px; }
-  section.calendarWidget nav.subnav {
-    margin: 36px 0 20px 0;
-    color: #fff; }
-  section.calendarWidget .cal-month-box, section.calendarWidget .cal-week-box, section.calendarWidget .cal-day-box {
-    background: rgba(255, 255, 255, 0.7); }
-  section.calendarWidget .cal-row-head:hover {
-    background: none; }
-  section.calendarWidget .cal-row-head .cal-cell1 {
-    color: #fff; }
-    section.calendarWidget .cal-row-head .cal-cell1:hover {
-      background: none; }
-  section.calendarWidget .events-list {
-    width: 100%;
-    padding: 2px 5px; }
-    section.calendarWidget .events-list a {
-      width: 100%;
-      height: 20px;
-      border-radius: 2px;
-      box-shadow: none;
-      border: none;
-      font-size: 10px;
-      text-align: center;
-      line-height: 20px;
-      background: #b329fe;
-      color: #fff; }
-  section.calendarWidget .cal-cell {
-    border-color: #fff; }
-  section.calendarWidget .cal-row-fluid {
-    border-color: #fff; }
-  section.calendarWidget .cal-slide-content {
-    background-color: #b329fe; }
-    section.calendarWidget .cal-slide-content ul li {
-      margin: 4px 0; }
-    section.calendarWidget .cal-slide-content .glyphicon {
-      color: #fff; }
-  section.calendarWidget .cal-day-tick {
-    bottom: -19px; }
-  section.calendarWidget .btn {
-    display: inline-block;
-    border: 2px solid #fff;
-    line-height: 31px;
-    font-size: 14px;
-    padding: 0 25px; }
-    section.calendarWidget .btn:hover {
-      background: #fff;
-      border: 2px solid #dbdbdb; }
-
-section.popup header {
-  border-bottom: 2px solid #756486;
-  height: 43px;
-  background-color: #917ca6; }
-  section.popup header .title {
-    color: #fff;
-    margin-left: 14px;
-    font-size: 24px;
-    line-height: 43px;
-    text-transform: capitalize; }
-  section.popup header .btn-close {
-    position: absolute;
-    right: 2px;
-    top: 2px;
-    background-color: #fff;
-    width: 23px;
-    height: 23px;
-    border-radius: 10px 0 10px 10px;
-    line-height: 19px;
-    font-size: 18px;
-    color: #756486;
-    font-family: verdana;
-    padding-left: 7px;
-    cursor: pointer; }
-section.popup main {
-  padding: 12px; }
-  section.popup main label {
-    display: inline-block;
-    color: #a434e1;
-    font-size: 14px; }
-  section.popup main .radio {
-    display: inline-block;
-    border: 1px solid #c1c1c1;
-    background-color: #fff;
-    color: #a434e1;
-    border-radius: 2px;
-    font-size: 12px;
-    line-height: 22px;
-    padding: 0 12px;
-    margin-left: 4px;
-    cursor: pointer; }
-    section.popup main .radio:hover, section.popup main .radio.selected {
-      border: 1px solid #c1c1c1;
-      background-color: #a434e1;
-      color: #fff; }
-  section.popup main .submit {
-    width: 100%;
-    border: 1px solid #c1c1c1;
-    background-color: #a434e1;
-    color: #fff;
-    font-size: 12px;
-    line-height: 22px; }
-section.popup .confirmationPanel {
-  position: absolute;
-  top: 0px;
-  background-color: #a434e1;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  color: #fff;
-  padding: 20px; }
-  section.popup .confirmationPanel p {
-    text-align: center;
-    margin-top: 140px; }
-  section.popup .confirmationPanel .btns {
-    margin-top: 40px;
-    text-align: center; }
-
-@font-face {
-  font-family: 'CaviarDreams';
-  src: url("/source/fonts/CaviarDreams.ttf") format("truetype"); }
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -233,3 +46,186 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url("/source/fonts/CaviarDreams.ttf") format("truetype"); }
+
+section.calendarWidget {
+  max-width: 647px;
+  margin: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  section.calendarWidget header {
+    text-align: center;
+    color: white; }
+    section.calendarWidget header h2 {
+      font-size: 30px;
+      margin: 26px 0 0 0; }
+    section.calendarWidget header h1 {
+      font-size: 60px;
+      margin: 17px 0 10px 0; }
+    section.calendarWidget header nav {
+      justify-content: center;
+      display: flex; }
+      section.calendarWidget header nav ul {
+        list-style: none; }
+        section.calendarWidget header nav ul li {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding: 0 10px 2px 10px;
+          margin: 0 25px;
+          border-bottom: 2px solid transparent; }
+          section.calendarWidget header nav ul li:hover {
+            border-bottom: 2px solid white; }
+            section.calendarWidget header nav ul li:hover:before {
+              content: "";
+              background: white;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 50%;
+              width: 2px; }
+            section.calendarWidget header nav ul li:hover:after {
+              content: "";
+              background: white;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              height: 50%;
+              width: 2px; }
+  section.calendarWidget nav.subnav {
+    margin: 36px 0 20px 0;
+    color: white; }
+  section.calendarWidget .cal-month-box, section.calendarWidget .cal-week-box, section.calendarWidget .cal-day-box {
+    background: rgba(255, 255, 255, 0.7); }
+  section.calendarWidget .cal-row-head:hover {
+    background: none; }
+  section.calendarWidget .cal-row-head .cal-cell1 {
+    color: white; }
+    section.calendarWidget .cal-row-head .cal-cell1:hover {
+      background: none; }
+  section.calendarWidget .events-list {
+    width: 100%;
+    padding: 2px 5px; }
+    section.calendarWidget .events-list a {
+      width: 100%;
+      height: 20px;
+      border-radius: 2px;
+      box-shadow: none;
+      border: none;
+      font-size: 10px;
+      text-align: center;
+      line-height: 20px;
+      background: #b329fe;
+      color: white; }
+  section.calendarWidget .cal-cell {
+    border-color: white; }
+  section.calendarWidget .cal-row-fluid {
+    border-color: white; }
+  section.calendarWidget .cal-slide-content {
+    background-color: #b329fe; }
+    section.calendarWidget .cal-slide-content .glyphicon {
+      color: white; }
+  section.calendarWidget .cal-day-tick {
+    bottom: -19px; }
+  section.calendarWidget .btn {
+    display: inline-block;
+    border: 2px solid white;
+    line-height: 31px;
+    font-size: 14px;
+    padding: 0 25px; }
+    section.calendarWidget .btn:hover {
+      background: white;
+      border: 2px solid #dbdbdb; }
+
+section.popup header {
+  border-bottom: 2px solid #756486;
+  height: 43px;
+  background-color: #917ca6; }
+  section.popup header .title {
+    color: white;
+    margin-left: 14px;
+    font-size: 24px;
+    line-height: 43px;
+    text-transform: capitalize; }
+  section.popup header .btn-close {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    background-color: white;
+    width: 23px;
+    height: 23px;
+    border-radius: 10px 0 10px 10px;
+    line-height: 19px;
+    font-size: 18px;
+    color: #756486;
+    font-family: verdana;
+    padding-left: 7px;
+    cursor: pointer; }
+section.popup main {
+  padding: 12px; }
+  section.popup main label {
+    display: inline-block;
+    color: #a434e1;
+    font-size: 14px; }
+  section.popup main .radio {
+    display: inline-block;
+    border: 1px solid #c1c1c1;
+    background-color: white;
+    color: #a434e1;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0 12px;
+    margin-left: 4px;
+    cursor: pointer; }
+    section.popup main .radio:hover, section.popup main .radio.selected {
+      border: 1px solid #c1c1c1;
+      background-color: #a434e1;
+      color: white; }
+  section.popup main .submit {
+    width: 100%;
+    border: 1px solid #c1c1c1;
+    background-color: #a434e1;
+    color: white;
+    font-size: 12px;
+    line-height: 22px; }
+  section.popup main em.error {
+    color: #a434e1;
+    font-size: 11px; }
+  section.popup main input.error {
+    border: 1px solid #a434e1; }
+section.popup .confirmationPanel {
+  position: absolute;
+  top: 0px;
+  background-color: #a434e1;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  padding: 20px; }
+  section.popup .confirmationPanel p {
+    text-align: center;
+    margin-top: 140px; }
+  section.popup .confirmationPanel .btns {
+    margin-top: 40px;
+    text-align: center; }
+
+html {
+  font-family: 'CaviarDreams'; }
+  html body {
+    font-family: 'CaviarDreams';
+    background: -webkit-linear-gradient(#b428ff, #c9c9c9);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#b428ff, #c9c9c9);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#b428ff, #c9c9c9);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#b428ff, #c9c9c9);
+    /* Standard syntax */ }

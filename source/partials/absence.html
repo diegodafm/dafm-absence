@@ -1,13 +1,16 @@
 <section  class="popup">
-    <form role="form" ng-submit="submit()" ng-show="action != 'show'">
+    <form name="form"  role="form" ng-submit="submit()" ng-show="action != 'show'" novalidate>
         <header>
             <div class="title"> {{action}} Absence </div>
             <div class="btn-close" ng-click="cancel()">x</div>
         </header>
+
         <main class="main">
             <div class="form-group">
-                <label for="userName">Name *</label>
-                <input id="userName" type="text" ng-model="absence.name" class="form-control ng-valid ng-dirty ng-valid-editable" required>
+                <label for="name">User Name *</label>
+                <input id="name" name="userName" type="text" ng-model="absence.name" ng-class="{'error': !validated.name}" class="form-control ng-valid ng-dirty ng-valid-editable">
+
+                <em class="error" ng-hide="validated.name"> User required</em>
             </div>
             <div class="form-group">
                 <label>Absence Type *</label>
@@ -16,15 +19,17 @@
                     <span class="radio" ng-model="absence.type" ng-class="{'selected': absence.type =='T'}" btn-radio="'T'" tooltip="Training">T</span>
                     <span class="radio" ng-model="absence.type" ng-class="{'selected': absence.type =='V'}" btn-radio="'V'" tooltip="Vacation">V</span>
                 </p>
+                <em class="error" ng-hide="validated.type"> Absence type required</em>
             </div>
             <div class="form-group">
                 <label >Date *</label>
                 <p class="input-group">
-                    <input type="text" class="form-control" ng-model="absence.date"  datepicker-popup="{{format}}" starting-day=0 ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                    <input type="text" class="form-control" ng-model="absence.date"  datepicker-popup="{{format}}" starting-day=0 ng-model="dt" is-open="opened" min-date="dateOptions.minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                     </span>
                 </p>
+                <em class="error" ng-hide="validated.date"> Date required</em>
             </div>
             <div class="form-group">
                 <label >Period *</label>
@@ -32,6 +37,7 @@
                     <span class="radio" ng-model="absence.period" ng-class="{'selected': absence.period =='AM'}" btn-radio="'AM'" ng-required="!absence.period">AM</span>
                     <span class="radio" ng-model="absence.period" ng-class="{'selected': absence.period =='PM'}" btn-radio="'PM'" ng-required="!absence.period">PM</span>
                 </p>
+                <em class="error" ng-hide="validated.period">Period required</em>
             </div>
             <button type="submit" class="btn btn-default submit">Submit</button>
 
