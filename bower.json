@@ -1,8 +1,8 @@
 {
-  "name": "myAngularSeed",
+  "name": "DAFM-Absence",
   "description": "My angular seed for application starter",
   "version": "0.0.0",
-  "repository": "https://github.com/diegofss11/myAngularSeed",
+  "repository": "https://github.com/diegodafm/dafm-absence",
   "license": "MIT",
   "devDependencies": {
     "angular": "~1.3.2",

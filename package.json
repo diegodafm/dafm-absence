@@ -1,9 +1,9 @@
 {
-  "name": "myAngularSeed",
+  "name": "DAFM-Absence",
   "version": "0.0.0",
   "author": "Diego ",
   "description": " s",
-  "repository": "https://github.com/diegofss11/myAngularSeed",
+  "repository": "https://github.com/diegodafm/dafm-absence",
   "license": "MIT",
   "dependencies": {
     "express": "~4.2.0",
