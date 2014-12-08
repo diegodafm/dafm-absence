@@ -309,10 +309,7 @@ section.popup .confirmationPanel .btns {
 /* line 12, ../../../styles/main.scss */
 html {
   font-family: 'CaviarDreams';
-}
-/* line 16, ../../../styles/main.scss */
-html body {
-  font-family: 'CaviarDreams';
+  min-height: 100%;
   background: -webkit-linear-gradient(#b428ff, #c9c9c9);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#b428ff, #c9c9c9);
@@ -321,4 +318,9 @@ html body {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#b428ff, #c9c9c9);
   /* Standard syntax */
+}
+/* line 22, ../../../styles/main.scss */
+html body {
+  font-family: 'CaviarDreams';
+  background-color: transparent;
 }

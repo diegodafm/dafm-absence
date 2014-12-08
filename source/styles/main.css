@@ -218,14 +218,16 @@ section.popup .confirmationPanel {
     text-align: center; }
 
 html {
-  font-family: 'CaviarDreams'; }
+  font-family: 'CaviarDreams';
+  min-height: 100%;
+  background: -webkit-linear-gradient(#b428ff, #c9c9c9);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#b428ff, #c9c9c9);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#b428ff, #c9c9c9);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#b428ff, #c9c9c9);
+  /* Standard syntax */ }
   html body {
     font-family: 'CaviarDreams';
-    background: -webkit-linear-gradient(#b428ff, #c9c9c9);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#b428ff, #c9c9c9);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#b428ff, #c9c9c9);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#b428ff, #c9c9c9);
-    /* Standard syntax */ }
+    background-color: transparent; }
