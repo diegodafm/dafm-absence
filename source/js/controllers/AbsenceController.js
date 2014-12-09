@@ -12,11 +12,11 @@
     angular.module('app')
         .controller('AbsenceController', function($scope, $modalInstance, action, event, AbsenceFactory, moment) {
 
-            init(event);
-
             $scope.action = action;
 
             $scope.showPanelMessage = false;
+
+            init(event);
 
             // Disable weekend selection
             $scope.disabled = function(date, mode) {
@@ -50,9 +50,7 @@
                             updateAbsence(absence);
                             break;
 
-                        case 'delete':
-                            $scope.deleteConfirmation = true;
-                            break;
+
                     }
                 } else {
                     return false;
@@ -89,6 +87,10 @@
                     $scope.absence = {};
                 } else {
                     $scope.absence = angular.copy(_absence);
+                }
+
+                if ($scope.action === 'delete') {
+                    $scope.deleteConfirmation = true;
                 }
             }
 

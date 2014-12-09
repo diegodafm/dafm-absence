@@ -88,8 +88,9 @@ module.exports = function( grunt ) {
                         'bower_components/moment/min/moment-with-locales.min.js',
                         'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
                         'bower_components/angular-ui-router/release/angular-ui-router.js',
-                        'bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar.js',
+                        //'bower_components/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar.js',
                         'bower_components/angular-route/angular-route.min.js',
+                        'source/vendor/custom-angular-bootstrap-calendar.js',
 		        		'source/js/**/*js',
 
                         /*--CSS--*/

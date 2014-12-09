@@ -76,32 +76,33 @@ section.calendarWidget {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: default;
 }
-/* line 14, ../../../styles/_calendar.scss */
+/* line 15, ../../../styles/_calendar.scss */
 section.calendarWidget header {
   text-align: center;
   color: white;
 }
-/* line 19, ../../../styles/_calendar.scss */
+/* line 20, ../../../styles/_calendar.scss */
 section.calendarWidget header h2 {
   font-size: 30px;
   margin: 26px 0 0 0;
 }
-/* line 24, ../../../styles/_calendar.scss */
+/* line 25, ../../../styles/_calendar.scss */
 section.calendarWidget header h1 {
   font-size: 60px;
   margin: 17px 0 10px 0;
 }
-/* line 29, ../../../styles/_calendar.scss */
+/* line 30, ../../../styles/_calendar.scss */
 section.calendarWidget header nav {
   justify-content: center;
   display: flex;
 }
-/* line 32, ../../../styles/_calendar.scss */
+/* line 33, ../../../styles/_calendar.scss */
 section.calendarWidget header nav ul {
   list-style: none;
 }
-/* line 35, ../../../styles/_calendar.scss */
+/* line 36, ../../../styles/_calendar.scss */
 section.calendarWidget header nav ul li {
   display: inline-block;
   cursor: pointer;
@@ -110,11 +111,11 @@ section.calendarWidget header nav ul li {
   margin: 0 25px;
   border-bottom: 2px solid transparent;
 }
-/* line 43, ../../../styles/_calendar.scss */
+/* line 44, ../../../styles/_calendar.scss */
 section.calendarWidget header nav ul li:hover {
   border-bottom: 2px solid white;
 }
-/* line 47, ../../../styles/_calendar.scss */
+/* line 48, ../../../styles/_calendar.scss */
 section.calendarWidget header nav ul li:hover:before {
   content: "";
   background: white;
@@ -124,7 +125,7 @@ section.calendarWidget header nav ul li:hover:before {
   height: 50%;
   width: 2px;
 }
-/* line 57, ../../../styles/_calendar.scss */
+/* line 58, ../../../styles/_calendar.scss */
 section.calendarWidget header nav ul li:hover:after {
   content: "";
   background: white;
@@ -134,33 +135,33 @@ section.calendarWidget header nav ul li:hover:after {
   height: 50%;
   width: 2px;
 }
-/* line 73, ../../../styles/_calendar.scss */
+/* line 74, ../../../styles/_calendar.scss */
 section.calendarWidget nav.subnav {
   margin: 36px 0 20px 0;
   color: white;
 }
-/* line 78, ../../../styles/_calendar.scss */
+/* line 79, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-month-box, section.calendarWidget .cal-week-box, section.calendarWidget .cal-day-box {
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 83, ../../../styles/_calendar.scss */
+/* line 84, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-row-head:hover {
   background: none;
 }
-/* line 87, ../../../styles/_calendar.scss */
+/* line 88, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-row-head .cal-cell1 {
   color: white;
 }
-/* line 89, ../../../styles/_calendar.scss */
+/* line 90, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-row-head .cal-cell1:hover {
   background: none;
 }
-/* line 95, ../../../styles/_calendar.scss */
+/* line 96, ../../../styles/_calendar.scss */
 section.calendarWidget .events-list {
   width: 100%;
   padding: 2px 5px;
 }
-/* line 99, ../../../styles/_calendar.scss */
+/* line 100, ../../../styles/_calendar.scss */
 section.calendarWidget .events-list a {
   width: 100%;
   height: 20px;
@@ -173,27 +174,27 @@ section.calendarWidget .events-list a {
   background: #b329fe;
   color: white;
 }
-/* line 113, ../../../styles/_calendar.scss */
+/* line 114, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-cell {
   border-color: white;
 }
-/* line 117, ../../../styles/_calendar.scss */
+/* line 118, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-row-fluid {
   border-color: white;
 }
-/* line 121, ../../../styles/_calendar.scss */
+/* line 122, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-slide-content {
   background-color: #b329fe;
 }
-/* line 130, ../../../styles/_calendar.scss */
+/* line 131, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-slide-content .glyphicon {
   color: white;
 }
-/* line 135, ../../../styles/_calendar.scss */
+/* line 136, ../../../styles/_calendar.scss */
 section.calendarWidget .cal-day-tick {
   bottom: -19px;
 }
-/* line 141, ../../../styles/_calendar.scss */
+/* line 142, ../../../styles/_calendar.scss */
 section.calendarWidget .btn {
   display: inline-block;
   border: 2px solid white;
@@ -201,7 +202,7 @@ section.calendarWidget .btn {
   font-size: 14px;
   padding: 0 25px;
 }
-/* line 149, ../../../styles/_calendar.scss */
+/* line 150, ../../../styles/_calendar.scss */
 section.calendarWidget .btn:hover {
   background: white;
   border: 2px solid #dbdbdb;

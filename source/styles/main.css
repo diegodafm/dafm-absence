@@ -59,7 +59,8 @@ section.calendarWidget {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  cursor: default; }
   section.calendarWidget header {
     text-align: center;
     color: white; }

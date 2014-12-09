@@ -16,11 +16,13 @@ angular
         'ui.bootstrap'
     ]);
 
-angular.module("mwl.calendar").run(["$templateCache", function($templateCache) {$templateCache.put("templates/day.html","<div class=\"cal-day-box\"><div class=\"row-fluid clearfix cal-row-head\"><div class=\"span1 col-xs-1 cal-cell\">Time</div><div class=\"span11 col-xs-11 cal-cell\">Events</div></div><div class=\"cal-day-panel\" style=\"height: 960px;\"><div class=\"cal-day-panel-hour\"><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>06:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>06:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>07:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>07:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>08:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>08:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>09:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>09:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>10:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>10:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>11:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>11:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>12:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>12:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>13:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>13:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>14:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>14:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>15:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>15:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>16:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>16:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>17:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>17:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>18:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>18:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>19:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>19:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>20:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>20:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>21:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>21:30</b></div><div class=\"span11 col-xs-11\"></div></div></div></div><div class=\"pull-left day-event day-highlight dh-event-{{ event.type }}\" ng-repeat=\"event in view track by $index\" ng-style=\"{top: event.top + \'px\', left: event.left + 60 + \'px\', height: event.height + \'px\'}\"><a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\"><span>{{ event.name | truncateEventTitle:20:event.height }}</span></a></div></div></div>");
-    $templateCache.put("templates/main.html","<div class=\"cal-context\" style=\"width: 100%;\"><mwl-calendar-year calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-edit-event-click=\"eventEditClick\" calendar-delete-event-click=\"eventDeleteClick\" calendar-edit-event-html=\"editEventHtml\" calendar-delete-event-html=\"deleteEventHtml\" calendar-auto-open=\"autoOpen\" ng-if=\"view == \'year\'\"></mwl-calendar-year><mwl-calendar-month calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-edit-event-click=\"eventEditClick\" calendar-delete-event-click=\"eventDeleteClick\" calendar-edit-event-html=\"editEventHtml\" calendar-delete-event-html=\"deleteEventHtml\" calendar-auto-open=\"autoOpen\" calendar-use-iso-week=\"useIsoWeek\" ng-if=\"view == \'month\'\"></mwl-calendar-month><mwl-calendar-week calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-use-iso-week=\"useIsoWeek\" ng-if=\"view == \'week\'\"></mwl-calendar-week><mwl-calendar-day calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" ng-if=\"view == \'day\'\"></mwl-calendar-day></div>");
-    $templateCache.put("templates/month.html","<div class=\"cal-row-fluid cal-row-head\"><div class=\"cal-cell1\" ng-repeat=\"day in weekDays\">{{ day }}</div></div><div class=\"cal-month-box\"><div ng-repeat=\"week in view track by $index\"><div class=\"cal-row-fluid cal-before-eventlist\"><div class=\"cal-cell1 cal-cell {{ day.highlightClass }}\" ng-repeat=\"day in week track by $index\" ng-click=\"dayClicked($parent.$index, $index)\" ng-class=\"{pointer: day.events.length > 0}\"><div class=\"cal-month-day\" ng-class=\"{\'cal-day-outmonth\': !day.inMonth, \'cal-day-inmonth\': day.inMonth, \'cal-day-weekend\': $index == 5 || $index == 6, \'cal-day-today\': day.isToday}\"><span class=\"pull-right\" data-cal-date=\"\">{{ day.label }}</span><div class=\"cal-day-tick\" ng-show=\"day.isOpened\"><i class=\"glyphicon glyphicon-chevron-up\"></i> <i class=\"fa fa-chevron-up\"></i></div><div class=\"events-list\" ng-show=\"day.events.length > 0\"><a href=\"javascript:;\" ng-repeat=\"event in day.events track by $index\" class=\"pull-left event event-{{ event.type }}\" tooltip-append-to-body=\"true\" tooltip=\"{{ event.name }}\">{{ event.type }} | {{ event.period }}</a></div></div></div></div><div class=\"cal-slide-box\" collapse=\"!week.isOpened\"><div class=\"cal-slide-content cal-event-list\"><ul class=\"unstyled list-unstyled\"><li ng-repeat=\"event in openEvents track by $index\"><span class=\"pull-left event event-{{ event.type }}\"></span> &nbsp; <a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\">{{ event.period  }} | {{ event.name  }}</a> <a href=\"javascript:;\" class=\"event-item-edit\" ng-if=\"editEventHtml && event.editable !== false\" ng-bind-html=\"$sce.trustAsHtml(editEventHtml)\" ng-click=\"eventEditClick({$event: event})\"></a> <a href=\"javascript:;\" class=\"event-item-delete\" ng-if=\"deleteEventHtml && event.deletable !== false\" ng-bind-html=\"$sce.trustAsHtml(deleteEventHtml)\" ng-click=\"eventDeleteClick({$event: event})\"></a></li></ul></div></div></div></div>");
-    $templateCache.put("templates/week.html","<div class=\"cal-week-box\"><div class=\"cal-row-fluid cal-row-head\"><div class=\"cal-cell1\" ng-repeat=\"column in view.columns track by $index\" ng-class=\"{\'cal-day-weekend\': $index > 4, \'cal-day-today\': column.isToday}\">{{ column.weekDay }}<br><small><span data-cal-date=\"\" ng-click=\"drillDown(column.day)\" class=\"pointer\">{{ column.date }}</span></small></div></div><hr><div class=\"cal-row-fluid\" ng-repeat=\"event in view.events track by $index\"><div class=\"cal-cell{{ event.daySpan }} cal-offset{{ event.dayOffset }} day-highlight dh-event-{{ event.type }}\" data-event-class=\"\"><a href=\"javascript:;\" ng-click=\"eventClick({$event: event})\" class=\"cal-event-week\">{{ event.name }}</a></div></div></div>");
-    $templateCache.put("templates/year.html","<div class=\"cal-year-box\"><div ng-repeat=\"year in view track by $index\"><div class=\"row cal-before-eventlist\"><div class=\"span3 col-md-3 col-xs-6 cal-cell\" ng-repeat=\"month in year track by $index\" ng-click=\"monthClicked($parent.$index, $index)\" ng-class=\"{pointer: month.events.length > 0, \'cal-day-today\': month.isToday}\"><span class=\"pull-right\" data-cal-date=\"\" ng-click=\"drillDown(month.monthIndex)\">{{ month.label }}</span> <small class=\"cal-events-num badge badge-important pull-left\" ng-show=\"month.events.length > 0\">{{ month.events.length }}</small><div class=\"cal-day-tick\" ng-show=\"month.isOpened\"><i class=\"glyphicon glyphicon-chevron-up\"></i> <i class=\"fa fa-chevron-up\"></i></div></div></div><div class=\"cal-slide-box\" collapse=\"!year.isOpened\"><span class=\"cal-slide-tick\"></span><div class=\"cal-slide-content\"><ul class=\"unstyled list-unstyled\"><li ng-repeat=\"event in openEvents track by $index\"><span class=\"pull-left event\" ng-class=\"\'event-\' + event.type\"></span> &nbsp; <a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\">{{ event.name }}</a> <a href=\"javascript:;\" class=\"event-item-edit\" ng-if=\"editEventHtml && event.editable !== false\" ng-bind-html=\"$sce.trustAsHtml(editEventHtml)\" ng-click=\"eventEditClick({$event: event})\"></a> <a href=\"javascript:;\" class=\"event-item-delete\" ng-if=\"deleteEventHtml && event.deletable !== false\" ng-bind-html=\"$sce.trustAsHtml(deleteEventHtml)\" ng-click=\"eventDeleteClick({$event: event})\"></a></li></ul></div></div></div></div>");}]);
+angular.module("mwl.calendar").run(["$templateCache", function($templateCache) {
+    $templateCache.put("templates/day.html", "<div class=\"cal-day-box\"><div class=\"row-fluid clearfix cal-row-head\"><div class=\"span1 col-xs-1 cal-cell\">Time</div><div class=\"span11 col-xs-11 cal-cell\">Events</div></div><div class=\"cal-day-panel\" style=\"height: 960px;\"><div class=\"cal-day-panel-hour\"><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>06:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>06:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>07:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>07:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>08:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>08:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>09:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>09:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>10:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>10:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>11:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>11:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>12:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>12:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>13:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>13:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>14:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>14:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>15:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>15:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>16:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>16:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>17:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>17:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>18:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>18:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>19:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>19:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>20:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>20:30</b></div><div class=\"span11 col-xs-11\"></div></div></div><div class=\"cal-day-hour\"><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>21:00</b></div><div class=\"span11 col-xs-11\"></div></div><div class=\"row-fluid cal-day-hour-part\"><div class=\"span1 col-xs-1\"><b>21:30</b></div><div class=\"span11 col-xs-11\"></div></div></div></div><div class=\"pull-left day-event day-highlight dh-event-{{ event.type }}\" ng-repeat=\"event in view track by $index\" ng-style=\"{top: event.top + \'px\', left: event.left + 60 + \'px\', height: event.height + \'px\'}\"><a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\"><span>{{ event.name | truncateEventTitle:20:event.height }}</span></a></div></div></div>");
+    $templateCache.put("templates/main.html", "<div class=\"cal-context\" style=\"width: 100%;\"><mwl-calendar-year calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-edit-event-click=\"eventEditClick\" calendar-delete-event-click=\"eventDeleteClick\" calendar-edit-event-html=\"editEventHtml\" calendar-delete-event-html=\"deleteEventHtml\" calendar-auto-open=\"autoOpen\" ng-if=\"view == \'year\'\"></mwl-calendar-year><mwl-calendar-month calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-edit-event-click=\"eventEditClick\" calendar-delete-event-click=\"eventDeleteClick\" calendar-edit-event-html=\"editEventHtml\" calendar-delete-event-html=\"deleteEventHtml\" calendar-auto-open=\"autoOpen\" calendar-use-iso-week=\"useIsoWeek\" ng-if=\"view == \'month\'\"></mwl-calendar-month><mwl-calendar-week calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" calendar-use-iso-week=\"useIsoWeek\" ng-if=\"view == \'week\'\"></mwl-calendar-week><mwl-calendar-day calendar-events=\"events\" calendar-current-day=\"currentDay\" calendar-event-click=\"eventClick\" ng-if=\"view == \'day\'\"></mwl-calendar-day></div>");
+    $templateCache.put("templates/month.html", "<div class=\"cal-row-fluid cal-row-head\"><div class=\"cal-cell1\" ng-repeat=\"day in weekDays\">{{ day }}</div></div><div class=\"cal-month-box\"><div ng-repeat=\"week in view track by $index\"><div class=\"cal-row-fluid cal-before-eventlist\"><div class=\"cal-cell1 cal-cell {{ day.highlightClass }}\" ng-repeat=\"day in week track by $index\" ng-click=\"dayClicked($parent.$index, $index)\" ng-class=\"{pointer: day.events.length > 0}\"><div class=\"cal-month-day\" ng-class=\"{\'cal-day-outmonth\': !day.inMonth, \'cal-day-inmonth\': day.inMonth, \'cal-day-weekend\': $index == 0 || $index == 6, \'cal-day-today\': day.isToday}\"><span class=\"pull-right\" data-cal-date=\"\">{{ day.label }}</span><div class=\"cal-day-tick\" ng-show=\"day.isOpened\"><i class=\"glyphicon glyphicon-chevron-up\"></i> <i class=\"fa fa-chevron-up\"></i></div><div class=\"events-list\" ng-show=\"day.events.length > 0\"><a href=\"javascript:;\" ng-repeat=\"event in day.events track by $index\" class=\"pull-left event event-{{ event.type }}\" tooltip-append-to-body=\"true\" tooltip=\"{{ event.name }}\">{{ event.type }} | {{ event.period }}</a></div></div></div></div><div class=\"cal-slide-box\" collapse=\"!week.isOpened\"><div class=\"cal-slide-content cal-event-list\"><ul class=\"unstyled list-unstyled\"><li ng-repeat=\"event in openEvents track by $index\"><span class=\"pull-left event event-{{ event.type }}\"></span> &nbsp; <a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\">{{ event.period  }} | {{ event.name  }}</a> <a href=\"javascript:;\" class=\"event-item-edit\" ng-if=\"editEventHtml && event.editable !== false\" ng-bind-html=\"$sce.trustAsHtml(editEventHtml)\" ng-click=\"eventEditClick({$event: event})\"></a> <a href=\"javascript:;\" class=\"event-item-delete\" ng-if=\"deleteEventHtml && event.deletable !== false\" ng-bind-html=\"$sce.trustAsHtml(deleteEventHtml)\" ng-click=\"eventDeleteClick({$event: event})\"></a></li></ul></div></div></div></div>");
+    $templateCache.put("templates/week.html", "<div class=\"cal-week-box\"><div class=\"cal-row-fluid cal-row-head\"><div class=\"cal-cell1\" ng-repeat=\"column in view.columns track by $index\" ng-class=\"{\'cal-day-weekend\': $index > 4, \'cal-day-today\': column.isToday}\">{{ column.weekDay }}<br><small><span data-cal-date=\"\" ng-click=\"drillDown(column.day)\" class=\"pointer\">{{ column.date }}</span></small></div></div><hr><div class=\"cal-row-fluid\" ng-repeat=\"event in view.events track by $index\"><div class=\"cal-cell{{ event.daySpan }} cal-offset{{ event.dayOffset }} day-highlight dh-event-{{ event.type }}\" data-event-class=\"\"><a href=\"javascript:;\" ng-click=\"eventClick({$event: event})\" class=\"cal-event-week\">{{ event.name }}</a></div></div></div>");
+    $templateCache.put("templates/year.html", "<div class=\"cal-year-box\"><div ng-repeat=\"year in view track by $index\"><div class=\"row cal-before-eventlist\"><div class=\"span3 col-md-3 col-xs-6 cal-cell\" ng-repeat=\"month in year track by $index\" ng-click=\"monthClicked($parent.$index, $index)\" ng-class=\"{pointer: month.events.length > 0, \'cal-day-today\': month.isToday}\"><span class=\"pull-right\" data-cal-date=\"\" ng-click=\"drillDown(month.monthIndex)\">{{ month.label }}</span> <small class=\"cal-events-num badge badge-important pull-left\" ng-show=\"month.events.length > 0\">{{ month.events.length }}</small><div class=\"cal-day-tick\" ng-show=\"month.isOpened\"><i class=\"glyphicon glyphicon-chevron-up\"></i> <i class=\"fa fa-chevron-up\"></i></div></div></div><div class=\"cal-slide-box\" collapse=\"!year.isOpened\"><span class=\"cal-slide-tick\"></span><div class=\"cal-slide-content\"><ul class=\"unstyled list-unstyled\"><li ng-repeat=\"event in openEvents track by $index\"><span class=\"pull-left event\" ng-class=\"\'event-\' + event.type\"></span> &nbsp; <a href=\"javascript:;\" class=\"event-item\" ng-click=\"eventClick({$event: event})\">{{ event.name }}</a> <a href=\"javascript:;\" class=\"event-item-edit\" ng-if=\"editEventHtml && event.editable !== false\" ng-bind-html=\"$sce.trustAsHtml(editEventHtml)\" ng-click=\"eventEditClick({$event: event})\"></a> <a href=\"javascript:;\" class=\"event-item-delete\" ng-if=\"deleteEventHtml && event.deletable !== false\" ng-bind-html=\"$sce.trustAsHtml(deleteEventHtml)\" ng-click=\"eventDeleteClick({$event: event})\"></a></li></ul></div></div></div></div>");
+}]);
 'use strict';
 
 /**
@@ -89,18 +91,18 @@ angular.module('mwl.calendar')
 
             return (
                 moment(eventStart).isAfter(moment(periodStart)) &&
-                    moment(eventStart).isBefore(moment(periodEnd))
-                ) || (
+                moment(eventStart).isBefore(moment(periodEnd))
+            ) || (
                 moment(eventEnd).isAfter(moment(periodStart)) &&
-                    moment(eventEnd).isBefore(moment(periodEnd))
-                ) || (
+                moment(eventEnd).isBefore(moment(periodEnd))
+            ) || (
                 moment(eventStart).isBefore(moment(periodStart)) &&
-                    moment(eventEnd).isAfter(moment(periodEnd))
-                ) || (
+                moment(eventEnd).isAfter(moment(periodEnd))
+            ) || (
                 moment(eventStart).isSame(moment(periodStart))
-                ) || (
+            ) || (
                 moment(eventEnd).isSame(moment(periodEnd))
-                );
+            );
 
         };
 
@@ -251,28 +253,31 @@ angular.module('mwl.calendar')
             var eventsSorted = events.filter(function(event) {
                 return self.eventIsInPeriod(event.starts_at, event.ends_at, beginningOfWeek, endOfWeek);
             }).map(function(event) {
-                    var span = moment(event.ends_at).startOf('day').diff(moment(event.starts_at).startOf('day'), 'days') + 1;
-                    if (span >= 7) {
-                        span = 7;
-                        if (moment(event.ends_at).startOf('day').diff(moment(endOfWeek).startOf('day'), 'days') < 0) {
-                            span += moment(event.ends_at).startOf('day').diff(moment(endOfWeek).startOf('day'), 'days') + dateOffset;
-                        }
+                var span = moment(event.ends_at).startOf('day').diff(moment(event.starts_at).startOf('day'), 'days') + 1;
+                if (span >= 7) {
+                    span = 7;
+                    if (moment(event.ends_at).startOf('day').diff(moment(endOfWeek).startOf('day'), 'days') < 0) {
+                        span += moment(event.ends_at).startOf('day').diff(moment(endOfWeek).startOf('day'), 'days') + dateOffset;
                     }
+                }
 
-                    var offset = moment(event.starts_at).startOf('day').diff(moment(beginningOfWeek).startOf('day'), 'days');
-                    if (offset < 0) offset = 0;
-                    if (offset > 6) offset = 6;
+                var offset = moment(event.starts_at).startOf('day').diff(moment(beginningOfWeek).startOf('day'), 'days');
+                if (offset < 0) offset = 0;
+                if (offset > 6) offset = 6;
 
-                    if (span - offset > 0) {
-                        span -= offset;
-                    }
+                if (span - offset > 0) {
+                    span -= offset;
+                }
 
-                    event.daySpan = span;
-                    event.dayOffset = offset;
-                    return event;
-                });
+                event.daySpan = span;
+                event.dayOffset = offset;
+                return event;
+            });
 
-            return {columns: columns, events: eventsSorted};
+            return {
+                columns: columns,
+                events: eventsSorted
+            };
 
         };
 
@@ -286,59 +291,59 @@ angular.module('mwl.calendar')
             return events.filter(function(event) {
                 return self.eventIsInPeriod(event.starts_at, event.ends_at, moment(currentDay).startOf('day').toDate(), moment(currentDay).endOf('day').toDate());
             }).map(function(event) {
+                if (moment(event.starts_at).isBefore(calendarStart)) {
+                    event.top = 0;
+                } else {
+                    event.top = moment(event.starts_at).startOf('minute').diff(calendarStart.startOf('minute'), 'minutes') - 2;
+                }
+
+                if (moment(event.ends_at).isAfter(calendarEnd)) {
+                    event.height = calendarHeight - event.top;
+                } else {
+                    var diffStart = event.starts_at;
                     if (moment(event.starts_at).isBefore(calendarStart)) {
-                        event.top = 0;
-                    } else {
-                        event.top = moment(event.starts_at).startOf('minute').diff(calendarStart.startOf('minute'), 'minutes') - 2;
+                        diffStart = calendarStart.toDate();
                     }
+                    event.height = moment(event.ends_at).diff(diffStart, 'minutes');
+                }
 
-                    if (moment(event.ends_at).isAfter(calendarEnd)) {
-                        event.height = calendarHeight - event.top;
-                    } else {
-                        var diffStart = event.starts_at;
-                        if (moment(event.starts_at).isBefore(calendarStart)) {
-                            diffStart = calendarStart.toDate();
+                if (event.top - event.height > calendarHeight) {
+                    event.height = 0;
+                }
+
+                event.left = 0;
+
+                return event;
+            }).filter(function(event) {
+                return event.height > 0;
+            }).map(function(event) {
+
+                var cannotFitInABucket = true;
+                buckets.forEach(function(bucket, bucketIndex) {
+                    var canFitInThisBucket = true;
+
+                    bucket.forEach(function(bucketItem) {
+                        if (self.eventIsInPeriod(event.starts_at, event.ends_at, bucketItem.starts_at, bucketItem.ends_at) || self.eventIsInPeriod(bucketItem.starts_at, bucketItem.ends_at, event.starts_at, event.ends_at)) {
+                            canFitInThisBucket = false;
                         }
-                        event.height = moment(event.ends_at).diff(diffStart, 'minutes');
-                    }
-
-                    if (event.top - event.height > calendarHeight) {
-                        event.height = 0;
-                    }
-
-                    event.left = 0;
-
-                    return event;
-                }).filter(function(event) {
-                    return event.height > 0;
-                }).map(function(event) {
-
-                    var cannotFitInABucket = true;
-                    buckets.forEach(function(bucket, bucketIndex) {
-                        var canFitInThisBucket = true;
-
-                        bucket.forEach(function(bucketItem) {
-                            if (self.eventIsInPeriod(event.starts_at, event.ends_at, bucketItem.starts_at, bucketItem.ends_at) || self.eventIsInPeriod(bucketItem.starts_at, bucketItem.ends_at, event.starts_at, event.ends_at)) {
-                                canFitInThisBucket = false;
-                            }
-                        });
-
-                        if (canFitInThisBucket && cannotFitInABucket) {
-                            cannotFitInABucket = false;
-                            event.left = bucketIndex * 150;
-                            buckets[bucketIndex].push(event);
-                        }
-
                     });
 
-                    if (cannotFitInABucket) {
-                        event.left = buckets.length * 150;
-                        buckets.push([event]);
+                    if (canFitInThisBucket && cannotFitInABucket) {
+                        cannotFitInABucket = false;
+                        event.left = bucketIndex * 150;
+                        buckets[bucketIndex].push(event);
                     }
 
-                    return event;
-
                 });
+
+                if (cannotFitInABucket) {
+                    event.left = buckets.length * 150;
+                    buckets.push([event]);
+                }
+
+                return event;
+
+            });
 
         };
 
@@ -363,7 +368,10 @@ angular.module('mwl.calendar')
                 openEvents = view[rowIndex][cellIndex].events;
             }
 
-            return {view: view, openEvents: openEvents};
+            return {
+                view: view,
+                openEvents: openEvents
+            };
 
         };
 
@@ -509,7 +517,7 @@ angular.module('mwl.calendar')
  * # mwlCalendarMonth
  */
 angular.module('mwl.calendar')
-    .directive('mwlCalendarMonth', ["$sce", "$timeout", "calendarHelper", function ($sce, $timeout, calendarHelper) {
+    .directive('mwlCalendarMonth', ["$sce", "$timeout", "calendarHelper", function($sce, $timeout, calendarHelper) {
         return {
             templateUrl: 'templates/month.html',
             restrict: 'EA',
@@ -649,7 +657,7 @@ angular.module('mwl.calendar')
  * # mwlCalendar
  */
 angular.module('mwl.calendar')
-    .directive('mwlCalendar', ["moment", function (moment) {
+    .directive('mwlCalendar', ["moment", function(moment) {
         return {
             templateUrl: 'templates/main.html',
             restrict: 'EA',
@@ -690,9 +698,9 @@ angular.module('mwl.calendar')
                 };
 
                 $scope.control.date = {
-                    year : moment($scope.currentDay).format('YYYY'),
-                    month : moment($scope.currentDay).format('MMMM'),
-                    day : moment($scope.currentDay).format('DD')
+                    year: moment($scope.currentDay).format('YYYY'),
+                    month: moment($scope.currentDay).format('MMMM'),
+                    day: moment($scope.currentDay).format('DD')
                 };
 
 
@@ -701,11 +709,11 @@ angular.module('mwl.calendar')
                     return self.titleFunctions[$scope.view]($scope.currentDay);
                 };
 
-                function formatDate(){
+                function formatDate() {
                     $scope.control.date = {
-                        year : moment($scope.currentDay).format('YYYY'),
-                        month : moment($scope.currentDay).format('MMMM'),
-                        day : moment($scope.currentDay).format('DD')
+                        year: moment($scope.currentDay).format('YYYY'),
+                        month: moment($scope.currentDay).format('MMMM'),
+                        day: moment($scope.currentDay).format('DD')
                     };
                 }
 
